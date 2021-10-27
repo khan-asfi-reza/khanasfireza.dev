@@ -5,6 +5,13 @@
 /.pnp
 .pnp.js
 
+/.next/*
+src/assets/images
+src/assets/fa
+src/assets/images/*
+src/assets/fa/*
+src/assets/data
+src/assets/data/*
 # testing
 /coverage
 

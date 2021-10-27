@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 
+.idea
+
 /.next/*
 src/assets/images
 src/assets/fa

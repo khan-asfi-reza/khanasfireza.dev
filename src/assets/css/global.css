@@ -12,13 +12,17 @@
 
 @layer components {
     .navbar-items{
-        @apply md:p-2 py-3 no-underline font-medium text-typo-dark-200 md:text-typo-light-200 md:dark:text-typo-dark-200 transition-all
+        @apply md:p-2 py-3 no-underline text-typo-dark-400 md:text-typo-light-200 md:dark:text-typo-dark-200 transition-all
         duration-200 hover:bg-primary hover:text-white hover:rounded-md hover:transform hover:-translate-y-1;
     }
 }
 
 .animate-float{
     animation: float 5s infinite ease-in-out;
+}
+
+.animation-opacity{
+    animation: animate-opacity 400ms ease-in;
 }
 
 .animation-delay-3{
@@ -39,6 +43,8 @@
     animation-duration: 6s;
 }
 
+
+
 @keyframes float {
     0% {
         transform: translatey(0px);
@@ -51,3 +57,50 @@
     }
 }
 
+@keyframes float-20 {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20%);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+
+@keyframes animate-opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px grey;
+    border-radius: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-700;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-800;
+}
+
+.transition-position{
+    transition: top, left, right, bottom, margin-top, margin-left, margin-bottom, margin-right 500ms;
+}

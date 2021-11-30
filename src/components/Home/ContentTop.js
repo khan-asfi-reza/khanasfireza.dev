@@ -1,7 +1,6 @@
-import {ContentImage, ObjectImage, ObjectNextImage} from "../Image";
+import {ContentImage, ObjectImage, ObjectNextImage} from "../Comp/Image";
 import HomeImage from "../../assets/images/KhanAsfiReza.png"
-
-
+import {HOC} from "../Comp/Hoc";
 import {FaMouse} from "react-icons/fa";
 import {SocialLinksJSXList} from "../../assets/data/SocialLinks";
 import classNames from "classnames";
@@ -21,19 +20,17 @@ export default function ContentTop() {
     )
 
     return(
-        <main className={"dark:bg-theme-dark-100 bg-theme-light-100 "}>
-
-
+        <main className={"dark:bg-theme-dark-100 bg-theme-light-100"}>
             <main className={"relative grid lg:grid-cols-3 grid-cols-1 container m-auto lg:py-28 py-12 auto-cols-min h-full"}>
                 {
-                    HomePageObjects.map((each) => <div key={each.name}>{each.element}</div>)
+                    HomePageObjects.map((each, key) => (<HOC key={key}>{each.element}</HOC>))
+
                 }
                 <div className={"mt-3 xL:ml-auto lg:order-2 order-1 lg:w-full w-10/12 m-auto auto-rows-min auto-cols-min"}>
                     <ContentImage src={HomeImage} divClassName={"relative"}>
                         <ObjectImage src={"/images/Bubble.png"} className={"z-50 absolute md:h-12 md:w-12 h-11 w-11 md:-top-2 md:left-2 -top-2 animate-float"}/>
                         <ObjectImage src={"/images/Bubble.png"} className={"z-50 absolute md:h-11 md:w-11 h-10 w-10 md:top-2 left-1/4 top-2 animate-float animation-delay-4"}/>
                     </ContentImage>
-
 
                 </div>
                 <div className={"lg:col-span-2 lg:order-1 order-2"}>
@@ -44,9 +41,12 @@ export default function ContentTop() {
                                     SocialLinksJSXList.map(({name, className, icon, link}, key) => (
                                         <a  key={key}
                                             aria-label={`${name} link`}
-                                           referrerPolicy={"strict-origin"}
-                                           href={link}
-                                           className={`text-xl md:mt-2 mr-3 ${className}`}>
+                                            referrerPolicy={"strict-origin"}
+                                            href={link}
+                                            className={`text-xl md:mt-2 mr-3 ${className}`}
+                                            target={"_blank"}
+
+                                        >
                                             {icon}
                                         </a>
                                     ))

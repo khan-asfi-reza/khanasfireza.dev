@@ -32,3 +32,7 @@ export const SocialLinksJSXList = [
         "className": "text-pink-700"
     },
 ]
+
+export const UPWORK_PROFILE = "https://www.upwork.com/freelancers/~019a9fe44e38691204";
+
+export const FIVERR_PROFILE = "https://www.fiverr.com/khanasfireza";

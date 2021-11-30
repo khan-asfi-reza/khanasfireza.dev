@@ -10,9 +10,34 @@ module.exports = {
         'xs': '475px',
         ...defaultTheme.screens,
       },
+      zIndex:{
+        '60': '60',
+        '100': '100'
+      },
+      spacing: {
+        '97': '30rem',
+        '98': '32rem',
+        '99': '34rem',
+        '100': '42rem',
+      },
       colors:{
         primary: "#0E8FC8",
         secondary: "#DCF6FF",
+        primaryLight: "#1FAADB",
+        chat:{
+          light: {
+            50: "#e7e7e7",
+            100: "#F5F7FA",
+            200: "#F0F3F6",
+            300: "#e9ebed",
+          },
+          dark: {
+            50: "#1c1d22",
+            100: "#1c1e23",
+            200: "#18191E",
+            300: "#121216",
+          }
+        },
         typo:{
           dark:{
             100: "#ABA7A7",
@@ -46,3 +71,4 @@ module.exports = {
   },
   plugins: [],
 }
+

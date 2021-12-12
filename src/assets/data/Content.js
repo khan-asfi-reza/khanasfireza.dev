@@ -13,7 +13,7 @@ import ReduxLogo from "../images/redux.png";
 import Vue from "../images/vue.png";
 import FastAPI from "../images/fastapi.png";
 import Django from "../images/django.png";
-import Psql from "../images/Psql.png";
+import Psql from "../images/psql.png";
 import Box from "../images/Box.png";
 import {FaCode, FaCogs, FaLaptopCode, FaMobileAlt} from "react-icons/fa";
 

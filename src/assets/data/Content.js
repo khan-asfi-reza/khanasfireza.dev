@@ -83,7 +83,7 @@ export const ExperienceContent = [
             "through the use of HTML, CSS, and JavaScript. I was introduced to frontend development at a very young age." +
             "Currently, developing front-end websites using various Javascript and CSS frameworks including, React, NextJS, Svelte, Angular, Vue, Tailwind Etc. " +
             "I am not only bound to design and develop UI but also specialized in " +
-            "State Management, UI Flow and Creating Complex Functionality"
+            "State Management, UI Flow and Creating Complex Functionality. I am currently focusing on UI Design, so that I can deliver a complete package"
     },
     {
         "icon": <FaCogs/>,
@@ -98,10 +98,10 @@ export const ExperienceContent = [
         "icon": <FaLaptopCode/>,
         "name": "Full-Stack and Dev-ops",
         "position": "right-0 transform translate-y-9 bottom-9",
-        "text": "Combining Front-end and Back-end development, Full-Stack Software development is done, as I specialize in both criteria, I can create powerful full-stack solutions." +
+        "text": "Being expert in both, I can provide robust full-stack solutions which can scale well." +
             "Using Django, Django Rest Framework, Flask, FastAPI, powerful APIs can developed which later can be connected with any standalone frontend system that can be made with React, Svelte, Angular" +
             "Not only frontend but also, Android and IOS Application. I can be the jack of all trades, but master of both. After developing and testing an application successfully, the solution/product must be deployed in a " +
-            "cloud system, where my devops skill comes in handy, I use tools like Docker, Github, Terraform to conduct operations"
+            "cloud system, where my devops skill comes in handy."
     },
 ]
 

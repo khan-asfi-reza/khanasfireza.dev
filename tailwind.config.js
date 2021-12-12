@@ -26,16 +26,18 @@ module.exports = {
         primaryLight: "#1FAADB",
         chat:{
           light: {
-            50: "#e7e7e7",
+            50: "#FFFFFF",
             100: "#F5F7FA",
             200: "#F0F3F6",
             300: "#e9ebed",
           },
           dark: {
-            50: "#1c1d22",
+            10:"#212226",
+            50: "#141414",
             100: "#1c1e23",
             200: "#18191E",
             300: "#121216",
+
           }
         },
         typo:{

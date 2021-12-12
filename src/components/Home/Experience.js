@@ -1,5 +1,4 @@
 import {SectionContainer} from "../Comp/SectionContainer";
-import {SectionHeader} from "../Comp/SectionHeader";
 import {ExperienceContent} from "../../assets/data/Content";
 import {SectionRow} from "../Comp/SectionRow";
 import classNames from "classnames";
@@ -41,8 +40,9 @@ export function Experience() {
                                     <div onClick={() => {
                                         setCurrent(key)
                                     }} key={key}
-                                         className={classNames(" cursor-pointer absolute w-28 h-28 rounded-full bg-secondary text-typo-light-100 border-primaryLight border-2", position, key === current && "bg-primaryLight text-typo-dark-400 animation-opacity")}>
+                                         className={classNames(" cursor-pointer absolute md:w-28 md:h-28 w-20 h-20 rounded-full text-typo-light-100 border-primaryLight border-2", position, key === current ? "bg-primaryLight text-typo-dark-400 animation-opacity" : "bg-secondary")}>
                                         <div className={"grid place-items-center w-full h-full text-5xl "}>
+
                                             {icon}
                                             <div
                                                 className={"absolute bg-primaryLight w-5 h-5 rounded-full top-0 right-0 animate-ping"}>
@@ -59,8 +59,8 @@ export function Experience() {
                         </div>
                     </div>
                     <div className={'grid place-items-center'}>
-                        <div>
-                            <div className={animate}>
+                        <div className={"grid"}>
+                            <div>
                                 <h3 className={"text-2xl font-semibold text-typo-light-400 dark:text-typo-dark-400"}>{ExperienceContent[current].name}</h3>
                                 <p className={"mt-12 text-typo-light-200 dark:text-typo-dark-100"}>
                                     {ExperienceContent[current].text}

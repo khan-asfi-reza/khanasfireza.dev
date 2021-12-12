@@ -1,0 +1,1 @@
+export const CONTACT_API = "https://khan-asfi-reza-backend.herokuapp.com/api/message"

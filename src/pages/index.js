@@ -6,6 +6,8 @@ import {Experience} from "../components/Home/Experience";
 import {Skills} from "../components/Home/Skills";
 import {HireMe} from "../components/Home/HireMe";
 import {Projects} from "../components/Home/Projects";
+import Contact from "../components/Home/Contact";
+import Footer from "../components/Home/Footer";
 
 const Home = () => {
   return(
@@ -18,8 +20,9 @@ const Home = () => {
             <Skills/>
             <HireMe/>
             <Projects/>
-
+            <Contact/>
         </BodyContent>
+        <Footer/>
       </>
   )
 }

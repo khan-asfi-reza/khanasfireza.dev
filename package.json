@@ -1,4 +1,6 @@
 {
+  "name": "portfolio",
+  "main": "server.js",
   "private": true,
   "scripts": {
     "dev": "next dev",

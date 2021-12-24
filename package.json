@@ -1,12 +1,9 @@
 {
   "name": "portfolio",
-  "main": "server.js",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "deploy": "firebase deploy --only functions, hosting"
+    "build": "next build && next export"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -16,10 +13,7 @@
     "@fortawesome/react-fontawesome": "^0.1.16",
     "babel-polyfill": "^6.26.0",
     "classnames": "^2.3.1",
-    "draft-js": "^0.11.7",
-    "firebase-admin": "^10.0.0",
     "font-awesome": "^4.7.0",
-    "immutable": "^4.0.0",
     "next": "latest",
     "next-themes": "0.0.15",
     "react": "^17.0.2",
@@ -30,7 +24,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",
-    "firebase-functions": "^3.16.0",
     "postcss": "^8.4.4",
     "tailwindcss": "^3.0.1"
   }

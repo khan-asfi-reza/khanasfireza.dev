@@ -8,10 +8,12 @@ import {HireMe} from "../components/Home/HireMe";
 import {Projects} from "../components/Home/Projects";
 import Contact from "../components/Home/Contact";
 import Footer from "../components/Home/Footer";
+import {SeoHead} from "../components/Comp/Head";
 
 const Home = () => {
   return(
       <>
+        <SeoHead/>
         <Header/>
         <BodyContent>
             <ContentTop/>

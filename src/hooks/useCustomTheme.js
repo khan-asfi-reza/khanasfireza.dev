@@ -1,6 +1,6 @@
 import {useTheme} from "next-themes";
-import { FontAwesomeIcon, } from '@fortawesome/react-fontawesome'
-import {faMoon, faSun} from "@fortawesome/free-solid-svg-icons";
+import {FaMoon, FaSun} from "react-icons/fa";
+
 
 export function useCustomTheme(){
     const {theme, setTheme} = useTheme();
@@ -13,21 +13,23 @@ export function useCustomTheme(){
             case "light":
                 setTheme("dark");
                 return
+            case "system":
+                setTheme("dark");
         }
     }
 
     function getThemeIcon() {
         switch (theme){
             case "dark":
-                return <FontAwesomeIcon icon={faMoon}/>
+                return <FaMoon/>
             case "light":
-                return <FontAwesomeIcon icon={faSun}/>
-
+                return <FaSun/>
+            case "System":
+                return <FaMoon/>
         }
     }
 
     return {
-        theme: theme,
         toggleTheme: toggleTheme,
         getThemeIcon: getThemeIcon
     }

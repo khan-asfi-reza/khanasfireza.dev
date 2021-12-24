@@ -53,11 +53,11 @@ export const Projects = () => {
     return(
         <SectionContainer className={"max-w-full mt-0"}>
             <DrawingHeader header={"Projects"} text={"My completed personal and client projects"}/>
-            <div className={"mt-12 grid md:grid-cols-8 gap-5 container mx-auto"}>
+            <div className={"mt-12 grid md:grid-cols-8 md:grid-flow-row gap-5 container mx-auto"}>
 
                 {
                     ProjectList.map((project, key) =>
-                        <div className={classNames("grid place-items-center relative", project.className)}>
+                        <div className={classNames("grid place-items-center relative ", project.className)}>
                             <div className={"w-11/12 overflow-hidden text-center grid place-items-center"}>
                                 <Image src={project.image}/>
                             </div>

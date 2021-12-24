@@ -57,7 +57,7 @@ export default function Header() {
                     </nav>
                     <div className={"flex flex-row justify-end items-center"}>
                         <button aria-label={"theme toggle"} onClick={toggleTheme}
-                                className={"align-middle duration-500 bg-primary w-7 h-7 hover:transform hover:-translate-y-1 rounded-full transition-all  text-white "}>
+                                className={"grid place-items-center duration-500 bg-primary w-7 h-7 hover:transform hover:-translate-y-1 rounded-full transition-all  text-white "}>
                             {getThemeIcon()}
                         </button>
                         <button onClick={navOnClick} aria-label={"navigation toggle"} className={"md:hidden ml-3 align-middle text-white bg-primary text-center px-3 h-7 rounded-xl"}>

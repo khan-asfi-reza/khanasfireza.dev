@@ -5,6 +5,7 @@ import {FaMailBulk, FaPaperPlane, FaPhone} from "react-icons/fa";
 import classNames from "classnames";
 import {useState} from "react";
 import {CONTACT_API} from "../../assets/data/API";
+import {CONTACT_ID} from "../../assets/data/ContentID";
 
 const ContactInfo = [
     {
@@ -92,20 +93,20 @@ const Contact = () => {
     }
 
     return(
-        <SectionContainer>
+        <SectionContainer id={CONTACT_ID}>
             <SectionHeader header={"Contact Me"} text={"Feel free to contact me"}/>
             <SectionRow className={"mt-20 gap-16"}>
-                <div className={"grid gap-y-16 md:mr-auto md:m-0 m-auto"}>
+                <div className={"grid gap-y-12 md:mr-auto md:m-0 m-auto"}>
 
                     {
                         ContactInfo.map((contact, key) =>
                             <div key={key} className={"flex flex-row "}>
-                                <div className={"h-14 w-14 text-xl rounded-full mr-3 bg-primaryLight grid place-items-center"}>
+                                <div className={"text-white h-14 w-14 text-xl rounded-full mr-3 bg-primaryLight grid place-items-center"}>
                                     {contact.icon}
                                 </div>
                                 <div>
-                                    <p className={"mb-2 text-2xl text-typo-light-300 dark:text-typo-dark-300"}>{contact.title}</p>
-                                    <p className={"text-lg text-typo-light-100 dark:text-typo-dark-100"}>{contact.text}</p>
+                                    <p className={"mb-2 text-xl text-typo-light-300 dark:text-typo-dark-300"}>{contact.title}</p>
+                                    <p className={"md:text-lg text-base text-typo-light-100 dark:text-typo-dark-100"}>{contact.text}</p>
                                 </div>
                             </div>
                         )
@@ -114,7 +115,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                    <div className={"dark:bg-theme-dark-100 bg-gray-200 rounded-xl bg-opacity-70 w-9/12 md:ml-auto m-auto h-full md:px-10 px-4 py-8"}>
+                    <div className={"dark:bg-theme-dark-100 bg-gray-200 rounded-xl bg-opacity-70 lg:w-10/12 md:w-full w-9/12 md:ml-auto m-auto h-full md:px-10 px-4 py-8"}>
                          <h2 className={"dark:text-typo-dark-400 text-3xl text-center"}>Send Message </h2>
                          <form onSubmit={onSubmit} className={"mt-10"}>
                              <div className="relative">

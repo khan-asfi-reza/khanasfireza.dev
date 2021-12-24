@@ -39,7 +39,7 @@ export const HomePageObjects = [
     },
     {
         "name": "Square",
-        "element": <ObjectNextImage src={Square} className={HOME_PAGE_OBJECT_CLASSNAME + "lg:top-7 left-1/2 top-2 left-0 animation-delay-4"} />
+        "element": <ObjectNextImage src={Square} className={HOME_PAGE_OBJECT_CLASSNAME + "lg:top-7 lg:left-1/2 top-64 left-0 animation-delay-4"} />
     },
     {
         "name": "Arc",

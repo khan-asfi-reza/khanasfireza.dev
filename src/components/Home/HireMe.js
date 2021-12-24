@@ -5,9 +5,11 @@ import AllImage from "../../assets/images/all.png";
 import Image from "next/image";
 import {SiFiverr, SiUpwork} from "react-icons/si";
 import {FIVERR_PROFILE, UPWORK_PROFILE} from "../../assets/data/SocialLinks";
+import {SERVICES_ID} from "../../assets/data/ContentID";
+
 export const HireMe = () => {
   return(
-      <SectionContainer className={"max-w-full dark:bg-theme-dark-100 bg-theme-light-100"}>
+      <SectionContainer id={SERVICES_ID} className={"max-w-full dark:bg-theme-dark-100 bg-theme-light-100"}>
           <div className="container mx-auto mt-10 py-10">
               <SectionHeader header={"Hire Me"} text={"Hire me for your desired project"}/>
               <SectionRow className={"mt-16"}>

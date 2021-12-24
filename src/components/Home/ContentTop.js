@@ -5,6 +5,7 @@ import {FaMouse} from "react-icons/fa";
 import {SocialLinksJSXList} from "../../assets/data/SocialLinks";
 import classNames from "classnames";
 import {HomePageIntroName, HomePageIntroText, HomePageIntroTitle, HomePageObjects} from "../../assets/data/Content";
+import {ABOUT_ID, HOME_ID} from "../../assets/data/ContentID";
 
 export default function ContentTop() {
 
@@ -20,7 +21,7 @@ export default function ContentTop() {
     )
 
     return(
-        <main className={"dark:bg-theme-dark-100 bg-theme-light-100"}>
+        <main id={HOME_ID} className={"dark:bg-theme-dark-100 bg-theme-light-100"}>
             <main className={"relative grid lg:grid-cols-3 grid-cols-1 container m-auto lg:py-28 py-12 auto-cols-min h-full"}>
                 {
                     HomePageObjects.map((each, key) => (<HOC key={key}>{each.element}</HOC>))
@@ -64,7 +65,7 @@ export default function ContentTop() {
                         </div>
                         <div className={"grid grid-cols-12 mt-16"}>
                             <div className={"grid md:col-start-2 col-span-12 md:place-items-start place-items-center"}>
-                                <button className={"bg-primary text-white rounded-3xl px-4 py-2 w-44 flex flex-row items-center justify-center"}>Scroll Down<FaMouse/></button>
+                                <a href={`#${ABOUT_ID}`} className={"bg-primary text-white rounded-3xl px-4 py-2 w-44 flex flex-row items-center justify-center"}>Scroll Down<FaMouse/></a>
                             </div>
                         </div>
                     </div>

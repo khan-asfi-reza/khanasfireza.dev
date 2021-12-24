@@ -4,11 +4,12 @@ import AboutImage from "../../assets/images/about.png";
 import {AboutPageData, AboutPageText} from "../../assets/data/Content";
 import {SectionHeader} from "../Comp/SectionHeader";
 import {SectionRow} from "../Comp/SectionRow";
+import {ABOUT_ID} from "../../assets/data/ContentID";
 
 export const About = () => {
 
     return(
-        <SectionContainer>
+        <SectionContainer id={ABOUT_ID}>
             <SectionHeader header={"About Me"} text={"Introduction"}/>
             <SectionRow>
                 <div>

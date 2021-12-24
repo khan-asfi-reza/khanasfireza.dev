@@ -9,6 +9,7 @@ import {Projects} from "../components/Home/Projects";
 import Contact from "../components/Home/Contact";
 import Footer from "../components/Home/Footer";
 import {SeoHead} from "../components/Comp/Head";
+import ScrollToTop from "../components/Comp/ScrollToTop";
 
 const Home = () => {
   return(
@@ -25,6 +26,7 @@ const Home = () => {
             <Contact/>
         </BodyContent>
         <Footer/>
+        <ScrollToTop/>
       </>
   )
 }

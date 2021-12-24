@@ -2,6 +2,7 @@ import {useCustomTheme} from "../../hooks/useCustomTheme";
 import classnames from "classnames";
 import {FaBars, FaTimes} from "react-icons/fa";
 import {useState} from "react";
+import {ABOUT_ID, CONTACT_ID, HOME_ID, SERVICES_ID, SKILLS_ID} from "../../assets/data/ContentID";
 
 export default function Header() {
 
@@ -27,7 +28,7 @@ export default function Header() {
     )
 
     return(
-        <header className={"m-auto fixed w-full top-0 left-0 h-16 bg-theme-light-100 dark:bg-theme-dark-100 grid place-items-center z-100"}>
+        <header className={"m-auto fixed w-full top-0 left-0 h-16 bg-theme-light-100 dark:bg-theme-dark-100 grid place-items-center z-100 border-b border-zinc-200 dark:border-zinc-900"}>
             <div className={"flex container m-auto px-2 py-3 h-full"}>
                 <div className={"flex-1 flex items-center"}>
                     <h3 className={"dark:text-typo-dark-400 text-typo-light-400 text-xl md:text-2xl font-bold"}>Khan Asfi Reza</h3>
@@ -48,11 +49,11 @@ export default function Header() {
                         </div>
                         <hr className={"md:hidden text-typo-dark-300 w-full m-auto my-2"}/>
                         <div className={"md:flex-row md:h-auto h-3/4 flex flex-col justify-around"}>
-                            <a href="" className="navbar-items"> Home </a>
-                            <a href="" className="navbar-items"> About </a>
-                            <a href="" className="navbar-items"> Skills </a>
-                            <a href="" className="navbar-items"> Services </a>
-                            <a href="" className="navbar-items"> Contact </a>
+                            <a href={`#${HOME_ID}`} className="navbar-items text-lg dark:text-typo-dark-300 text-typo-light-300"> Home </a>
+                            <a href={`#${ABOUT_ID}`} className="navbar-items text-lg dark:text-typo-dark-300 text-typo-light-300"> About </a>
+                            <a href={`#${SKILLS_ID}`} className="navbar-items text-lg dark:text-typo-dark-300 text-typo-light-300"> Skills </a>
+                            <a href={`#${SERVICES_ID}`} className="navbar-items text-lg dark:text-typo-dark-300 text-typo-light-300"> Services </a>
+                            <a href={`#${CONTACT_ID}`} className="navbar-items text-lg dark:text-typo-dark-300 text-typo-light-300"> Contact </a>
                         </div>
                     </nav>
                     <div className={"flex flex-row justify-end items-center"}>

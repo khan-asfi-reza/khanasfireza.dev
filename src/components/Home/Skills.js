@@ -4,13 +4,14 @@ import {SectionRow} from "../Comp/SectionRow";
 import {getNumberOfYear, getPercentage, SkillContent} from "../../assets/data/Content";
 import Image from "next/image";
 import {useAge} from "../../hooks/useAge";
+import {SKILLS_ID} from "../../assets/data/ContentID";
 
 
 export const Skills = () => {
   const age = useAge(2016);
 
   return(
-      <SectionContainer>
+      <SectionContainer id={SKILLS_ID}>
           <SectionHeader header={"Skills"} text={"My Technical Skills"}/>
           <SectionRow className={"gap-x-24 gap-y-20 mt-12"}>
               {SkillContent.map(({name, logo, text, skill_set}, key) => (

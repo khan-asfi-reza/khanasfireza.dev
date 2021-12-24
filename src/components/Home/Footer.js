@@ -2,6 +2,7 @@ import {SectionContainer} from "../Comp/SectionContainer";
 import {SectionRow} from "../Comp/SectionRow";
 import {SocialLinksJSXList} from "../../assets/data/SocialLinks";
 import classNames from "classnames";
+import {ABOUT_ID, CONTACT_ID, HOME_ID, SERVICES_ID, SKILLS_ID} from "../../assets/data/ContentID";
 
 const Footer = () => {
 
@@ -13,11 +14,11 @@ const Footer = () => {
                 <SectionRow className={"mt-4 p-0 md:relative md:place-items-stretch grid place-items-center"}>
                     <div>
                         <div className={"flex flex-row"}>
-                            <a href="" className={"mr-3 md:text-xl text-l text-typo-dark-300"}>Home</a>
-                            <a href="" className={"mr-3 md:text-xl text-l text-typo-dark-300"}>About</a>
-                            <a href="" className={"mr-3 md:text-xl text-l text-typo-dark-300"}>Skills</a>
-                            <a href="" className={"mr-3 md:text-xl text-l text-typo-dark-300"}>Services</a>
-                            <a href="" className={"mr-3 md:text-xl text-l text-typo-dark-300"}>Contact</a>
+                            <a href={`#${HOME_ID}`} className={"mr-3 md:text-xl text-l text-typo-dark-300"}>Home</a>
+                            <a href={`#${ABOUT_ID}`} className={"mr-3 md:text-xl text-l text-typo-dark-300"}>About</a>
+                            <a href={`#${SKILLS_ID}`} className={"mr-3 md:text-xl text-l text-typo-dark-300"}>Skills</a>
+                            <a href={`#${SERVICES_ID}`} className={"mr-3 md:text-xl text-l text-typo-dark-300"}>Services</a>
+                            <a href={`#${CONTACT_ID}`} className={"mr-3 md:text-xl text-l text-typo-dark-300"}>Contact</a>
                         </div>
                     </div>
 

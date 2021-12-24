@@ -115,7 +115,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                    <div className={"dark:bg-theme-dark-100 bg-gray-200 rounded-xl bg-opacity-70 lg:w-10/12 md:w-full w-9/12 md:ml-auto m-auto h-full md:px-10 px-4 py-8"}>
+                    <div className={"dark:bg-theme-dark-100 bg-gray-200 rounded-xl bg-opacity-70 lg:w-9/12 md:w-full w-9/12 md:ml-auto m-auto h-full md:px-10 px-4 py-8"}>
                          <h2 className={"dark:text-typo-dark-400 text-3xl text-center"}>Send Message </h2>
                          <form onSubmit={onSubmit} className={"mt-10"}>
                              <div className="relative">

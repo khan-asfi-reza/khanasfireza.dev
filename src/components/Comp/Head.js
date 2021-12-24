@@ -10,7 +10,7 @@ export const SeoHead = () => (
         {
             SeoMetaTags.map((each, i) =>
                 (
-                    <meta key={i} name={each.name} content={each.content} property={each.property}/>
+                    <meta key={i} {each.name && `name=${each.name}`} content={each.content} property={each.property}/>
                 )
             )
         }

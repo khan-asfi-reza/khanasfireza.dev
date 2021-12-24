@@ -13,12 +13,12 @@ import classNames from "classnames";
 const ProjectList = [
     {
         "name": "BlogSpot",
-        "className": "bg-primary md:row-span-2 md:col-span-4",
+        "className": "bg-gray-200 dark:bg-gray-800 md:row-span-2 md:col-span-4",
         "image": BlogSpot
     },
     {
         "name": "Funskul",
-        "className": "bg-indigo-600 md:col-span-4",
+        "className": "bg-blue-600 md:col-span-4",
         "image": Funskul
     },
     {
@@ -43,7 +43,7 @@ const ProjectList = [
     },
     {
         "name": "SCP",
-        "className": "bg-primary md:col-span-4",
+        "className": "bg-gray-200 dark:bg-gray-800 md:col-span-4",
         "image": SCP
     },
 

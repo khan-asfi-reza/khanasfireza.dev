@@ -24,7 +24,7 @@ export function useCustomTheme(){
                 return <FaMoon/>
             case "light":
                 return <FaSun/>
-            case "System":
+            case "system":
                 return <FaMoon/>
         }
     }

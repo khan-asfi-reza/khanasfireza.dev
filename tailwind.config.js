@@ -56,6 +56,7 @@ module.exports = {
         },
         theme:{
           light:{
+            50: "#edebeb",
             100: "#F9F6F6",
             200: "#FBFBFB",
           },

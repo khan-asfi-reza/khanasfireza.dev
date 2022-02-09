@@ -78,30 +78,21 @@ export const ExperienceContent = [
     {
         "icon": <FaMobileAlt/>,
         "name": "Frontend Development",
-        "position": " left-1/2 transform -translate-x-1/2 -translate-y-1/2 ",
-        "text": "Front-end web development is the development of the graphical user interface of a website, " +
-            "through the use of HTML, CSS, and JavaScript. I was introduced to frontend development at a very young age." +
-            "Currently, developing front-end websites using various Javascript and CSS frameworks including, React, NextJS, Svelte, Angular, Vue, Tailwind Etc. " +
-            "I am not only bound to design and develop UI but also specialized in " +
-            "State Management, UI Flow and Creating Complex Functionality. I am currently focusing on UI Design, so that I can deliver a complete package"
+        "color": "dark:text-green-400 text-green-700",
+        "text": "I develop front-end applications using various Javascript and CSS frameworks including, React, NextJS, Svelte, Angular, Vue, Tailwind Etc. "
+
     },
     {
         "icon": <FaCogs/>,
         "name": "Backend Development",
-        "position": "left-0 transform translate-y-9 bottom-9",
-        "text": "Backend development also known as server-side development, which primarily focuses on database, business logic, API etc, " +
-            "I like backend development the most as I like to solve real life problems using programming, logics and algorithms. Mostly I develop" +
-            "Backend Applications with Django, Flask, FastAPI and Express. Among these frameworks, I love to develop applications in Django, as it is one" +
-            "of the most powerful frameworks available. With the help of DjangoRestFramework, Django Channels, Graphene, powerful and scalable applications can be developed"
+        "color": "dark:text-purple-400 text-purple-700",
+        "text": "I focus mainly on the backend and develop applications using, django, flask, fastapi, django-rest-framework, node-js, graphene, java etc with postgresql database and mongodb"
     },
     {
         "icon": <FaLaptopCode/>,
         "name": "Full-Stack and Dev-ops",
-        "position": "right-0 transform translate-y-9 bottom-9",
-        "text": "Being expert in both, I can provide robust full-stack solutions which can scale well." +
-            "Using Django, Django Rest Framework, Flask, FastAPI, powerful APIs can developed which later can be connected with any standalone frontend system that can be made with React, Svelte, Angular" +
-            "Not only frontend but also, Android and IOS Application. I can be the jack of all trades, but master of both. After developing and testing an application successfully, the solution/product must be deployed in a " +
-            "cloud system, where my devops skill comes in handy."
+        "color": "dark:text-blue-400 text-blue-700",
+        "text": "Most of the time, I develop full-stack solutions using django, react, flask, vue etc with postgresql or mysql database. I have expertise in basic security and deployment as well"
     },
 ]
 
@@ -113,17 +104,17 @@ export const FrontEndSkillContent = {
         {
             name: "CSS",
             logo: CSS,
-            year: 2016
+            year: 2017
         },
         {
             name: "TypeScript",
             logo: TypeScript,
-            year: 2017
+            year: 2018
         },
         {
             name: "React",
             logo: ReactLogo,
-            year: 2018
+            year: 2019
         },
         {
             name: "Redux",
@@ -146,17 +137,17 @@ export const BackEndSkillContent = {
         {
             name: "Python",
             logo: Python,
-            year: 2016
+            year: 2017
         },
         {
             name: "Django",
             logo: Django,
-            year: 2017
+            year: 2018
         },
         {
             name: "PostGreSQL",
             logo: Psql,
-            year: 2017
+            year: 2018
         },
         {
             name: "FastAPI",

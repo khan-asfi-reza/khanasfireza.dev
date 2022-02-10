@@ -38,15 +38,15 @@ export const About = () => {
         <SectionContainer id={ABOUT_ID} className={"md:max-w-full m-auto py-10  container mx-auto"}>
             <div className={"grid mt-10 grid md:grid-cols-5 grid-cols-1 md:gap-32 gap-y-10 xl:px-32 gap-y-10"}>
                 <div className={"md:order-1 order-2 md:transform col-span-2 md:rotate-12"}>
-                    <div className={"grid md:grid-cols-2 sm:grid-cols-3 justify-content-center xs:grid-cols-3 grid-cols-2 md:gap-10 sm:gap-12 gap-4"}>
+                    <div className={"grid md:grid-cols-2 sm:grid-cols-3 justify-content-center grid-cols-3 md:gap-10 sm:gap-12 gap-4"}>
                         {
                             SkillContentList.map((elem, key) => (
                                 <div className={"aspect-square md:p-0 sm:p-4 p-2 py-4 rounded-xl dark:bg-theme-dark-100 bg-theme-light-50 grid place-items-center"}>
                                     <div className={"text-center"}>
-                                        <div className={"md:w-12 md:h-20 w-10 h-10 overflow-hidden mx-auto"}>
+                                        <div className={"md:w-12 md:h-20 sm:w-10 sm:h-10 w-8 h-8 overflow-hidden mx-auto"}>
                                             <img className={"w-full object-cover object-center"} alt={elem.name} src={elem.logo.src}/>
                                         </div>
-                                        <p className={"mt-2 text-lg dark:text-typo-dark-100 text-typo-light-400"}>{elem.name}</p>
+                                        <p className={"mt-2 md:text-lg dark:text-typo-dark-100 text-typo-light-400 text-sm"}>{elem.name}</p>
                                     </div>
                                 </div>
                             ))

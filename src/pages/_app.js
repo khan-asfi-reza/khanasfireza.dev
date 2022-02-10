@@ -1,5 +1,6 @@
 import '../assets/css/global.css';
 import '../assets/fa/css/all.min.css';
+
 import {ThemeProvider} from "next-themes"
 import Layout from "../container/Layout/Layout";
 

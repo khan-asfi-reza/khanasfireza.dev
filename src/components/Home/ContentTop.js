@@ -13,7 +13,7 @@ export default function ContentTop() {
         "text-typo-light-400 dark:text-typo-dark-400 font-bold 2xl:text-8xl md:text-7xl mob-xl:text-6xl text-5xl"
     )
     const h3ClassName = classNames(
-        "mt-5 text-typo-light-400 dark:text-typo-dark-400 font-bold 2xl:mt-7 2xl:text-5xl md:text-4xl text-3xl"
+        "mt-5 text-primaryLight  font-bold 2xl:mt-7 2xl:text-5xl md:text-4xl text-3xl"
     )
 
     const pClassName = classNames(

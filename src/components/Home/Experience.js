@@ -16,7 +16,7 @@ export function Experience() {
 
                 <span className={"overflow-hidden z-1 absolute md:text-9xl text-8xl dark:text-typo-light-100 text-typo-light-100 opacity-10 top-0"}>WHAT</span>
             </div>
-            <div className={"grid md:grid-cols-3 mt-40 gap-20"}>
+            <div className={"grid md:grid-cols-3 mt-40 xl:gap-20 lg:gap-16 md:gap-5"}>
 
                 {
                     ExperienceContent.map((elem, key) => (

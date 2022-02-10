@@ -11,7 +11,7 @@ import Invasso from "../../assets/images/Projects/Image9.png";
 import classNames from "classnames";
 
 
-const TagClassName = (...args) => classNames("px-4 mr-4 mt-2 py-2 border-2 text-xs font-bold  rounded-2xl", ...args)
+const TagClassName = (...args) => classNames("px-4 mr-1 mt-2 py-2 text-xs font-bold  rounded-2xl", ...args)
 
 const Python = () => (
     <div className={TagClassName("border-yellow-600 bg-amber-200 text-yellow-600")}>

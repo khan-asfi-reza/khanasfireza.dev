@@ -20,7 +20,7 @@ export function Experience() {
 
                 {
                     ExperienceContent.map((elem, key) => (
-                        <div className={"dark:bg-theme-dark-100 bg-theme-light-50 p-8 relative rounded-xl"}>
+                        <div key={key} className={"dark:bg-theme-dark-100 bg-theme-light-50 p-8 relative rounded-xl"}>
                             <div className={classnames("absolute h-16 w-16 rounded-full grid place-items-center dark:bg-theme-dark-200 border-4 dark:border-theme-dark-100 bg-theme-light-200 -top-6 text-3xl", elem.color)}>
                                 {elem.icon}
                             </div>

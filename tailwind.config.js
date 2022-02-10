@@ -1,18 +1,19 @@
-const defaultTheme = require("tailwindcss");
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   mode: 'jit',
   purge: ['./src/**/*.{js,ts,jsx,tsx}', './src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
-
+    screens: {
+      'xs': '475px',
+      ...defaultTheme.screens,
+    },
     extend: {
-      screens: {
-        'xs': '475px',
-        ...defaultTheme.screens,
-      },
+
       zIndex:{
         '60': '60',
         '100': '100'
+
       },
       spacing: {
         '97': '30rem',
@@ -61,8 +62,9 @@ module.exports = {
             200: "#FBFBFB",
           },
           dark:{
-            100: "#121317",
-            200: "#18191E",
+            100: "#18191E",
+
+            200: "#121317",
           }
         }
 

@@ -20,7 +20,6 @@ const Home = () => {
             <ContentTop/>
             <Experience/>
             <About/>
-            <Skills/>
             <HireMe/>
             <Projects/>
             <Contact/>

@@ -91,9 +91,44 @@ export const ExperienceContent = [
     {
         "icon": <FaLaptopCode/>,
         "name": "Full-Stack and Dev-ops",
-        "color": "dark:text-blue-400 text-blue-700",
+        "color": "dark:text-red-400 text-red-700",
         "text": "Most of the time, I develop full-stack solutions using django, react, flask, vue etc with postgresql or mysql database. I have expertise in basic security and deployment as well"
     },
+]
+
+
+
+export const SkillContentList = [
+        {
+            name: "Python",
+            logo: Python,
+            year: 2017
+        },
+        {
+            name: "TypeScript",
+            logo: TypeScript,
+            year: 2018
+        },
+        {
+            name: "React",
+            logo: ReactLogo,
+            year: 2019
+        },
+        {
+            name: "Django",
+            logo: Django,
+            year: 2019
+        },
+        {
+            name: "FastAPI",
+            logo: FastAPI,
+            year: 2019
+        },
+        {
+            name: "PostGreSQL",
+            logo: Psql,
+            year: 2018
+        },
 ]
 
 export const FrontEndSkillContent = {

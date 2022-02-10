@@ -7,6 +7,7 @@ export const SeoHead = () => (
         <link rel="shortcut icon" href=""/>
         <meta charSet="UTF-8"/>
         <meta httpEquiv="X-UA-Compatible" content="ie=edge"/>
+        <link rel="shortcut icon" href="/favicon.ico" />
         {
             SeoMetaTags.map((each, i) =>
                 (

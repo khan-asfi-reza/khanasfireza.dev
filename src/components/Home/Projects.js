@@ -61,45 +61,48 @@ const ProjectList = [
         "image": BlogSpot,
         "text": "A regular blog site like twitter or reddit, to implement the UI. Built using HTML, CSS and JavaScript",
         "tags": [<Python/>, <HTML/>, <CSS/>, <JS/>],
+        "link": "https://khan-asfi-reza.github.io/Blog-Spot/"
     },
     {
         "name": "Funskul",
         "image": Funskul,
         "tags": [<HTML/>, <CSS/>, <JS/>],
-        "text": "A website for extra curricular learning platform, built with CMS for managing contents"
+        "text": "A website for extra curricular learning platform, built with CMS for managing contents",
+        "link": "https://funskul.com/"
 
     },
-    {
-        "name": "Tech Mountain",
-        "image": TechMountain,
-        "tags": [<HTML/>, <CSS/>, <JS/>],
-        "text": "A template website for a tech based company as their portfolio to showcase their services"
-    },
+    // {
+    //     "name": "Tech Mountain",
+    //     "image": TechMountain,
+    //     "tags": [<HTML/>, <CSS/>, <JS/>],
+    //     "text": "A template website for a tech based company as their portfolio to showcase their services",
+    //     "link": ""
+    // },
     {
         "name": "Referral",
         "image": Referral,
         "tags": [<Python/>, <Svelte/>, <CSS/>, <Django/>],
-        "text": "A website for handling referral campaign, where people can come and refer other people to earn money"
+        "text": "A website for handling referral campaign, where people can come and refer other people to earn money",
+        "link": "https://agent.shorecapital.net/referral/"
     },
-    {
-        "name": "Disease Symptom",
-        "image": DiseaseSymptom,
-        "tags": [<ReactFramework/>, <CSS/>, <JS/>],
-        "text": "A website that shows us diseases based on symptoms built using Columbia University Papers"
-    },
-    {
-        "name": "Invasso",
-        "image": Invasso,
-        "tags": [<ReactFramework/>, <CSS/>, <JS/>, <Django/>, <Python/>],
-        "text": "A portfolio website for an Egyptian IT Firm to showcase their works and services, also an option to buy their service"
-    },
-    {
-        "name": "SCP",
-        "image": SCP,
-        "tags": [<ReactFramework/>, <CSS/>, <JS/>, <Django/>, <Python/>],
-        "text": "A portfolio for a mortgage "
-    },
-
+    // {
+    //     "name": "Disease Symptom",
+    //     "image": DiseaseSymptom,
+    //     "tags": [<ReactFramework/>, <CSS/>, <JS/>],
+    //     "text": "A website that shows us diseases based on symptoms built using Columbia University Papers"
+    // },
+    // {
+    //     "name": "Invasso",
+    //     "image": Invasso,
+    //     "tags": [<ReactFramework/>, <CSS/>, <JS/>, <Django/>, <Python/>],
+    //     "text": "A portfolio website for an Egyptian IT Firm to showcase their works and services, also an option to buy their service"
+    // },
+    // {
+    //     "name": "SCP",
+    //     "image": SCP,
+    //     "tags": [<ReactFramework/>, <CSS/>, <JS/>, <Django/>, <Python/>],
+    //     "text": "A portfolio for a mortgage "
+    // },
 ]
 
 
@@ -107,7 +110,7 @@ export const Projects = () => {
     return(
         <SectionContainer className={"max-w-full mt-0 z-20"}>
             <DrawingHeader header={"Projects"} text={"My completed personal and client projects"}/>
-            <div className={"mt-12 grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-x-5 gap-y-10 container mx-auto z-20"}>
+            <div className={"mt-12 grid xl:grid-cols-3 lg:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 lg:gap-x-10 gap-x-5 gap-y-10 container mx-auto z-20"}>
 
                 {
                     ProjectList.map((project, key) =>

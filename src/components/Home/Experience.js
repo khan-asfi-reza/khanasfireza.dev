@@ -12,7 +12,8 @@ const headerClassNameFunc = () => classnames("font-semibold md:text-6xl xs:text-
 export function Experience() {
 
     return (
-        <SectionContainer className={"relative"}>
+        <SectionContainer className={"relative mt-40"}>
+
             <div className={"xl:px-32 lg:px-10 grid md:grid-cols-2 mt-10 xl:gap-20  lg:gap-16 md:gap-5 gap-y-14"}>
                 <div className={"relative md:text-left text-center"}>
                     <h2 className={headerClassNameFunc()}>What I Do?</h2>

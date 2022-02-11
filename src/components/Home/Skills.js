@@ -1,10 +1,10 @@
 import {SectionContainer} from "../Comp/SectionContainer";
 import {SectionHeader} from "../Comp/SectionHeader";
 import {SectionRow} from "../Comp/SectionRow";
-
+import {gsap} from "gsap";
 import {SKILLS_ID} from "../../assets/data/ContentID";
 import {AllSkillContents} from "../../assets/data/Content";
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import classNames from "classnames";
 
 
@@ -33,18 +33,21 @@ const WorkingExperience = [
 
 export const Skills = () => {
    const [current, setCurrent] = useState(1);
-    const [animation, setAnimation] = useState("")
+   const [animation, setAnimation] = useState("")
+
+   const headRef = useRef(null);
 
    useEffect(()=>{
        setInterval(()=>{
-           setAnimation("opacity-0");
-           setTimeout(()=>{
-               setCurrent(current === 1 ? 0 : 1);
-               setTimeout(()=>{
-                   setAnimation("opacity-100");
-               },100)
-           },200)
-
+           gsap.from(headRef.current, {
+               duration: 3,
+               opacity: 0,
+           })
+           setCurrent(current === 1 ? 0 : 1);
+           gsap.to(headRef.current, {
+               opacity: 1,
+               duration: 3,
+           })
        }, 8000)
    }, [])
 
@@ -54,11 +57,12 @@ export const Skills = () => {
               <div>
                   <SectionHeader header={"Skills and Experience"} headerClassName={"text-left text-primary"}/>
                   <p className={"mt-14 dark:text-typo-dark-100 text-typo-light-200"}>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, voluptate? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, sed?
+                      I have professional experience in more than 10+ Languages and Frameworks along with relational databases and many other
+                      technical tools. I have worked with 3 Companies and several clients to provide services.
                   </p>
                   <div className={"mt-12"}>
                       <h2 className={"dark:text-typo-dark-400 text-typo-light-400 text-4xl font-semibold"}>Skills</h2>
-                      <div className={"grid grid-cols-3 md:gap-10 gap-3 mt-12"}>
+                      <div ref={headRef} className={"grid grid-cols-3 md:gap-10 gap-3 mt-12"}>
                           {
                               AllSkillContents[current].map(
                                   (content, key) => (

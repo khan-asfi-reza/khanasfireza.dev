@@ -1,7 +1,10 @@
+
 export default function BodyContent({children}){
     return (
-        <div className={"mt-16"}>
+        <>
+        <main className={"mt-16 relative"}>
             {children}
-        </div>
+        </main>
+        </>
     )
 }

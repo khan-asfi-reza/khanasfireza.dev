@@ -11,6 +11,14 @@
     scroll-behavior: smooth;
 }
 
+.particles{
+    position:absolute !important;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+}
+
 @layer components {
     .navbar-items{
         @apply md:p-2 py-3 no-underline text-typo-dark-400 md:text-typo-light-200 md:dark:text-typo-dark-200 transition-all

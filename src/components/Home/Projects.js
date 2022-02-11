@@ -105,13 +105,13 @@ const ProjectList = [
 
 export const Projects = () => {
     return(
-        <SectionContainer className={"max-w-full mt-0"}>
+        <SectionContainer className={"max-w-full mt-0 z-20"}>
             <DrawingHeader header={"Projects"} text={"My completed personal and client projects"}/>
-            <div className={"mt-12 grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-x-5 gap-y-10 container mx-auto"}>
+            <div className={"mt-12 grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-x-5 gap-y-10 container mx-auto z-20"}>
 
                 {
                     ProjectList.map((project, key) =>
-                        <div key={key} className={classNames("grid grid-rows-2 dark:bg-theme-dark-100 bg-theme-light-50 rounded-xl")}>
+                        <div key={key} className={classNames("grid grid-rows-2 dark:bg-theme-dark-100 bg-theme-light-50 rounded-xl z-20")}>
                             <div className={"relative h-56 overflow-hidden rounded-xl text-center"}>
                                 <div className={"w-full h-full overflow-hidden text-center grid place-items-center"}>
                                     <img alt={"Project Image"} className={"w-full h-full object-fill"} src={project.image.src}/>

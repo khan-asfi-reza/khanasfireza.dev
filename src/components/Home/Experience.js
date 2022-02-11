@@ -2,6 +2,8 @@ import {SectionContainer} from "../Comp/SectionContainer";
 import {SectionHeader} from "../Comp/SectionHeader";
 import classnames from "classnames";
 import {ExperienceContent} from "../../assets/data/Content";
+import {ContentParticle} from "../Comp/Particles";
+
 
 const headerClassNameFunc = () => classnames("font-semibold md:text-6xl xs:text-5xl text-4xl text-primary",);
 
@@ -9,8 +11,10 @@ const headerClassNameFunc = () => classnames("font-semibold md:text-6xl xs:text-
 export function Experience() {
 
     return (
-        <SectionContainer >
+        <SectionContainer className={"relative"}>
+
             <div className={"relative"}>
+
                 <h2 className={headerClassNameFunc()}>What I Do?</h2>
                 <hr className={classnames("w-20 mt-3 text-primary bg-primary w-25 h-1")}/>
 

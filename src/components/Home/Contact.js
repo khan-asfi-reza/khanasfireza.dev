@@ -93,10 +93,10 @@ const Contact = () => {
     }
 
     return(
-        <SectionContainer id={CONTACT_ID}>
+        <SectionContainer id={CONTACT_ID} className={"z-20"}>
             <SectionHeader header={"Contact Me"} text={"Feel free to contact me"}/>
-            <SectionRow className={"mt-20 gap-16"}>
-                <div className={"grid gap-y-12 md:mr-auto md:m-0 m-auto"}>
+            <SectionRow className={"mt-20 gap-16 z-20"}>
+                <div className={"grid gap-y-12 md:mr-auto md:m-0 m-auto z-20"}>
 
                     {
                         ContactInfo.map((contact, key) =>
@@ -113,9 +113,8 @@ const Contact = () => {
                     }
 
                 </div>
-
                 <div>
-                    <div className={"dark:bg-theme-dark-100 bg-gray-200 rounded-xl bg-opacity-70 lg:w-9/12 md:w-full w-9/12 md:ml-auto m-auto h-full md:px-10 px-4 py-8"}>
+                    <div className={"z-20 dark:bg-theme-dark-100 bg-gray-200 rounded-xl bg-opacity-70 lg:w-9/12 md:w-full w-9/12 md:ml-auto m-auto h-full md:px-10 px-4 py-8"}>
                          <h2 className={"dark:text-typo-dark-400 text-3xl text-center"}>Send Message </h2>
                          <form onSubmit={onSubmit} className={"mt-10"}>
                              <div className="relative">
@@ -154,9 +153,6 @@ const Contact = () => {
                                  </svg>}
                                  Send
                              </button>
-
-
-
                          </form>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-import {ContentImage, ObjectImage, ObjectNextImage} from "../Comp/Image";
+import {ContentImage, ObjectImage} from "../Comp/Image";
 import HomeImage from "../../assets/images/KhanAsfiReza.png"
 import {HOC} from "../Comp/Hoc";
 import {FaMouse} from "react-icons/fa";
@@ -7,7 +7,7 @@ import classNames from "classnames";
 import {HomePageIntroName, HomePageIntroText, HomePageIntroTitle, HomePageObjects} from "../../assets/data/Content";
 import {ABOUT_ID, HOME_ID} from "../../assets/data/ContentID";
 
-export default function ContentTop() {
+export default function Hero() {
 
     const h1ClassName = classNames(
         "text-typo-light-400 dark:text-typo-dark-400 font-bold 2xl:text-8xl md:text-7xl mob-xl:text-6xl text-5xl"
@@ -21,7 +21,7 @@ export default function ContentTop() {
     )
 
     return(
-        <main id={HOME_ID} className={"dark:bg-theme-dark-100 bg-theme-light-100"}>
+        <main id={HOME_ID} className={"dark:bg-theme-dark-100 bg-theme-light-100 z-20"}>
             <main className={"relative grid lg:grid-cols-3 grid-cols-1 container m-auto lg:py-28 py-12 auto-cols-min h-full"}>
                 {
                     HomePageObjects.map((each, key) => (<HOC key={key}>{each.element}</HOC>))

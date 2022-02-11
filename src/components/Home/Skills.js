@@ -46,7 +46,7 @@ export const Skills = () => {
            },200)
 
        }, 8000)
-   })
+   }, [])
 
   return(
       <SectionContainer id={SKILLS_ID}>

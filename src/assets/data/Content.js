@@ -5,6 +5,8 @@ import Square from "../images/Square.png";
 import Arc from "../images/Arc.png";
 import Triangle from "../images/Triangle.png";
 import CSS from "../images/css.png";
+import Go from "../images/go.png";
+import CPP from "../images/cpp.png";
 import Kt from "../images/kt.png";
 import Python from "../images/python.png";
 import TypeScript from "../images/ts.png";
@@ -130,6 +132,75 @@ export const SkillContentList = [
             year: 2018
         },
 ]
+
+const SkillShowCaseContents1 = [
+    {
+        name: "Python",
+        logo: Python,
+        year: 2017
+    },
+    {
+        name: "TypeScript",
+        logo: TypeScript,
+        year: 2018
+    },
+    {
+        name: "CSS",
+        logo: CSS,
+        year: 2017
+    },
+    {
+        name: "Kotlin",
+        logo: Kt,
+        year: 2019
+    },
+    {
+        name: "CPP",
+        logo: CPP,
+        year: 2017
+    },
+    {
+        name: "Go",
+        logo: Go,
+        year: 2017
+    },
+
+]
+const SkillShowCaseContents2 = [
+    {
+        name: "Django",
+        logo: Django,
+        year: 2019
+    },
+    {
+        name: "FastAPI",
+        logo: FastAPI,
+        year: 2019
+    },
+    {
+        name: "PostGreSQL",
+        logo: Psql,
+        year: 2018
+    },
+    {
+        name: "React",
+        logo: ReactLogo,
+        year: 2019
+    },
+    {
+        name: "Redux",
+        logo: ReduxLogo,
+        year: 2019
+    },
+    {
+        name: "Vue",
+        logo: Vue,
+        year: 2019
+    },
+
+]
+
+export const AllSkillContents = [SkillShowCaseContents1, SkillShowCaseContents2]
 
 export const FrontEndSkillContent = {
     logo: <FaCode/>,

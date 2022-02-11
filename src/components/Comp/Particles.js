@@ -51,19 +51,20 @@ export const ContentParticle = ({id}) => {
                                number: {
                                    density: {
                                        enable: true,
-                                       area: 800,
+                                       area: 4000,
+
                                    },
                                    value: 80,
                                },
                                opacity: {
-                                   value: 0.5,
+                                   value: 0.7,
                                },
                                shape: {
                                    type: "circle",
                                },
                                size: {
                                    random: true,
-                                   value: 5,
+                                   value: 7,
                                },
                            },}}
                        canvasClassName={"particles"}/>

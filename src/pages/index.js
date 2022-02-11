@@ -10,6 +10,7 @@ import Footer from "../components/Home/Footer";
 import {SeoHead} from "../components/Comp/Head";
 import ScrollToTop from "../components/Comp/ScrollToTop";
 import {ContentParticle} from "../components/Comp/Particles";
+import {Skills} from "../components/Home/Skills";
 
 
 
@@ -21,15 +22,12 @@ const Home = () => {
         <BodyContent>
             <ContentParticle id={"experience_particle"}/>
             <Hero/>
-            <section className={"relative"}>
-                <Experience/>
-                <About/>
-            </section>
+            <Experience/>
+            <About/>
+            <Skills/>
             <HireMe/>
-            <section className={"relative"}>
-                <Projects/>
-                <Contact/>
-            </section>
+            <Projects/>
+            <Contact/>
         </BodyContent>
         <Footer/>
         <ScrollToTop/>

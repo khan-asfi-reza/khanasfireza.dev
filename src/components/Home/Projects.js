@@ -1,17 +1,14 @@
 import {SectionContainer} from "../Comp/SectionContainer";
-import {DrawingHeader} from "../Comp/Drawings";
-import {FaExternalLinkAlt} from "react-icons/fa";
-import Funskul from "../../assets/images/Projects/Image1.png";
-import BlogSpot from "../../assets/images/Projects/Image2.png";
-import DiseaseSymptom from "../../assets/images/Projects/Image4.png";
-import TechMountain from "../../assets/images/Projects/Image5.png";
-import Referral from "../../assets/images/Projects/Image7.png";
-import SCP from "../../assets/images/Projects/Image8.png";
-import Invasso from "../../assets/images/Projects/Image9.png";
+import BlogSpot from "../../assets/images/project1.png";
+import Funskul from "../../assets/images/project2.png";
+import Referral from "../../assets/images/project3.png";
 import classNames from "classnames";
+import {SectionHeader} from "../Comp/SectionHeader";
+import Image from "next/image";
+import {ABOUT_ID} from "../../assets/data/ContentID";
+import {FaExternalLinkAlt} from "react-icons/fa";
 
-
-const TagClassName = (...args) => classNames("px-4 mr-1 mt-2 py-2 text-xs font-bold  rounded-2xl", ...args)
+const TagClassName = (...args) => classNames("px-4 mr-2 mt-2 py-2 text-xs font-bold  rounded-2xl", ...args)
 
 const Python = () => (
     <div className={TagClassName("border-yellow-600 bg-amber-200 text-yellow-600")}>
@@ -59,7 +56,11 @@ const ProjectList = [
     {
         "name": "BlogSpot",
         "image": BlogSpot,
-        "text": "A regular blog site like twitter or reddit, to implement the UI. Built using HTML, CSS and JavaScript",
+        "text": <>
+            Blogspot is a blog site, similar to reddit or twitter
+            A person can create account, login and them upload contents and images. <br/> A person can create their profile
+            update it or change it whenever he or she wants. A user can follow multiple other users and create connection,
+            A user can subscribe to any content creator.<br/> This web app is built using HTML, CSS, Django, Python</>,
         "tags": [<Python/>, <HTML/>, <CSS/>, <JS/>],
         "link": "https://khan-asfi-reza.github.io/Blog-Spot/"
     },
@@ -67,7 +68,13 @@ const ProjectList = [
         "name": "Funskul",
         "image": Funskul,
         "tags": [<HTML/>, <CSS/>, <JS/>],
-        "text": "A website for extra curricular learning platform, built with CMS for managing contents",
+        "text": <>
+            Funskul is a interactive learning platform for extra curricular activities, generally Online Learning
+            Platforms are more likely prone to create content related to curricular studies. But funskul mainly focuses
+            on extra curricular activities. <br/> Anyone who is interested to learn any sort of extra curricular skills
+            are welcome to our platform, we use social medias and content sites to publish our contents, for example,
+            youtube or facebook, besides we have our website to showcase our activities and link our contents there.
+        </>,
         "link": "https://funskul.com/"
 
     },
@@ -82,7 +89,12 @@ const ProjectList = [
         "name": "Referral",
         "image": Referral,
         "tags": [<Python/>, <Svelte/>, <CSS/>, <Django/>],
-        "text": "A website for handling referral campaign, where people can come and refer other people to earn money",
+        "text": <>
+        We all have seen referral marketing strategies and websites that enables users to refer others and provide them
+            discounts or profits and also by inviting others a user can earn profit, This project is similar to that.
+            But this is only for referring other users to get loan for properties, if a user can invite other people to
+            close a loan or deal, the user can earn good amount of profit.
+        </>,
         "link": "https://agent.shorecapital.net/referral/"
     },
     // {
@@ -108,39 +120,67 @@ const ProjectList = [
 
 export const Projects = () => {
     return(
-        <SectionContainer className={"max-w-full mt-0 z-20"}>
-            <DrawingHeader header={"Projects"} text={"My completed personal and client projects"}/>
-            <div className={"mt-12 grid xl:grid-cols-3 lg:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 lg:gap-x-10 gap-x-5 gap-y-10 container mx-auto z-20"}>
+        <SectionContainer >
+            <SectionHeader header={"Recent Projects"}  headerClassName={"text-left text-primary"}/>
+            <hr className={"w-32 h-2 rounded-xl bg-primary border-none"}/>
+            <div className={"mt-12 grid xl:grid-cols-1 lg:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 gap-10"}>
 
                 {
                     ProjectList.map((project, key) =>
-                        <div key={key} className={classNames("grid grid-rows-2 dark:bg-theme-dark-100 bg-theme-light-50 rounded-xl z-20")}>
-                            <div className={"relative h-56 overflow-hidden rounded-xl text-center"}>
-                                <div className={"w-full h-full overflow-hidden text-center grid place-items-center"}>
-                                    <img alt={"Project Image"} className={"w-full h-full object-fill"} src={project.image.src}/>
+                        <div key={key} className={classNames("grid grid-cols-2 gap-10")}>
+                            <div className={key % 2 === 0 ? "order-2" : "order-1"}>
+                                <h2 className={"text-4xl dark:text-typo-dark-300 text-typo-light-300 text-medium"}>{project.name}</h2>
+                                <p className={"mt-10 dark:text-typo-dark-100 text-typo-light-100"}>{project.text}</p>
+
+                                <div className={"mt-10"}>
+                                    <div className={"flex flex-wrap mt-5"}>
+                                                     {
+                                                         project.tags.map((each, k) => (
+                                                             <div key={k}>
+                                                                 {each}
+                                                             </div>
+                                                         ))
+                                                     }
+                                                 </div>
+                                </div>
+                                <div className={"mt-10"}>
+                                    <a href={project.link} className={"bg-primary hover:bg-primaryLight text-white rounded-3xl px-4 py-2 w-32 flex flex-row items-center justify-center"}>Visit <span className={"ml-1"}><FaExternalLinkAlt/></span></a>
                                 </div>
                             </div>
-                            <div className={"py-5 md:px-6 px-4 "}>
-                                <div className={"h-1/2"}>
-                                    <div className="flex items-center">
-                                        <h3 className={"dark:text-typo-dark-300 text-typo-light-300 text-lg mb-0 mr-3"}>{project.name}</h3>
-                                        <a className={"text-blue-400"} href=""><FaExternalLinkAlt/></a>
-                                    </div>
-                                    <p className={"dark:text-typo-dark-100 mt-4 text-typo-light-100 text-sm"}>{project.text}</p>
-                                </div>
-
-                                <div className={"flex flex-wrap mt-5"}>
-                                    {
-                                        project.tags.map((each, k) => (
-                                            <div key={k}>
-                                                {each}
-                                            </div>
-                                        ))
-                                    }
+                            <div className={key % 2 === 0 ? "order-1" : "order-2"}>
+                                <div className={"w-full"}>
+                                    <Image src={project.image}/>
                                 </div>
                             </div>
-
-                        </div>)
+                        </div>
+                        // <div key={key} className={classNames("grid grid-rows-2 dark:bg-theme-dark-100 bg-theme-light-50 rounded-xl z-20")}>
+                        //     <div className={"relative h-56 overflow-hidden rounded-xl text-center"}>
+                        //         <div className={"w-full h-full overflow-hidden text-center grid place-items-center"}>
+                        //             <img alt={"Project Image"} className={"w-full h-full object-fill"} src={project.image.src}/>
+                        //         </div>
+                        //     </div>
+                        //     <div className={"py-5 md:px-6 px-4 "}>
+                        //         <div className={"h-1/2"}>
+                        //             <div className="flex items-center">
+                        //                 <h3 className={"dark:text-typo-dark-300 text-typo-light-300 text-lg mb-0 mr-3"}>{project.name}</h3>
+                        //                 <a className={"text-blue-400"} href=""><FaExternalLinkAlt/></a>
+                        //             </div>
+                        //             <p className={"dark:text-typo-dark-100 mt-4 text-typo-light-100 text-sm"}>{project.text}</p>
+                        //         </div>
+                        //
+                        //         <div className={"flex flex-wrap mt-5"}>
+                        //             {
+                        //                 project.tags.map((each, k) => (
+                        //                     <div key={k}>
+                        //                         {each}
+                        //                     </div>
+                        //                 ))
+                        //             }
+                        //         </div>
+                        //     </div>
+                        //
+                        // </div>
+                    )
                 }
 
             </div>

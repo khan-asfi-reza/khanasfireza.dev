@@ -2,7 +2,7 @@
   "name": "portfolio",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "vercel dev",
     "build": "next build"
   },
   "dependencies": {

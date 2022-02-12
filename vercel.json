@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "pages/api/mail.js": {
+      "memory": 3008
+    }
+  }
+}

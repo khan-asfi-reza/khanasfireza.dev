@@ -70,13 +70,15 @@ export const Skills = () => {
            sl.from(each, {
                opacity: 0,
                y: 10,
+               duration: 0.1
            })
        })
        Array.from(workingRef.current.children).map(each => {
            sl.from(each, {
                opacity: 0,
-               y: -100
-           })
+               y: -100,
+               duration: 0.5
+           }, )
        })
    }, [])
 

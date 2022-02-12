@@ -73,7 +73,11 @@ const Contact = () => {
                     sent: true
                 })
                 setTimeout(()=>{
-                    changeData({...data, sent: false})
+                    changeData({name: "",
+                        email: "",
+                        message: "",
+                        loading: false,
+                        sent: false})
                 }, 5000)
 
             }).catch((e) => {

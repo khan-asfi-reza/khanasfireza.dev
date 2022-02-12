@@ -1,6 +1,7 @@
 import classnames from "classnames";
-export const SectionContainer = ({className, children, ...rest}) => (
-    <section className={classnames("container mx-auto mt-20", className && className)} {...rest}>
+import React from "react";
+export const SectionContainer = React.forwardRef( ({children, className, ...rest},ref) => (
+    <section ref={ref} className={classnames("container mx-auto mt-20", className && className)} {...rest}>
         {children}
     </section>
-)
+))

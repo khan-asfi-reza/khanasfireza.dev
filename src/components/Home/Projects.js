@@ -5,8 +5,10 @@ import Referral from "../../assets/images/project3.png";
 import classNames from "classnames";
 import {SectionHeader} from "../Comp/SectionHeader";
 import Image from "next/image";
-import {ABOUT_ID} from "../../assets/data/ContentID";
 import {FaExternalLinkAlt} from "react-icons/fa";
+import {useEffect, useRef} from "react";
+import {gsap} from "gsap";
+import {PROJECT_ID} from "../../assets/data/ContentID";
 
 const TagClassName = (...args) => classNames("px-4 mr-2 mt-2 py-2 text-xs font-bold  rounded-2xl", ...args)
 
@@ -78,13 +80,6 @@ const ProjectList = [
         "link": "https://funskul.com/"
 
     },
-    // {
-    //     "name": "Tech Mountain",
-    //     "image": TechMountain,
-    //     "tags": [<HTML/>, <CSS/>, <JS/>],
-    //     "text": "A template website for a tech based company as their portfolio to showcase their services",
-    //     "link": ""
-    // },
     {
         "name": "Referral",
         "image": Referral,
@@ -97,33 +92,31 @@ const ProjectList = [
         </>,
         "link": "https://agent.shorecapital.net/referral/"
     },
-    // {
-    //     "name": "Disease Symptom",
-    //     "image": DiseaseSymptom,
-    //     "tags": [<ReactFramework/>, <CSS/>, <JS/>],
-    //     "text": "A website that shows us diseases based on symptoms built using Columbia University Papers"
-    // },
-    // {
-    //     "name": "Invasso",
-    //     "image": Invasso,
-    //     "tags": [<ReactFramework/>, <CSS/>, <JS/>, <Django/>, <Python/>],
-    //     "text": "A portfolio website for an Egyptian IT Firm to showcase their works and services, also an option to buy their service"
-    // },
-    // {
-    //     "name": "SCP",
-    //     "image": SCP,
-    //     "tags": [<ReactFramework/>, <CSS/>, <JS/>, <Django/>, <Python/>],
-    //     "text": "A portfolio for a mortgage "
-    // },
+
 ]
 
 
 export const Projects = () => {
+    const projectListRef = useRef(null);
+    useEffect(()=>{
+        const sl = gsap.timeline({
+            scrollTrigger: "#"+PROJECT_ID
+        })
+        sl.from("#project_header", {
+            opacity: 0,
+            x: -100
+        })
+        Array.from(projectListRef.current.children).map(each => {
+            sl.from(each, {
+                y: 100,
+            })
+        })
+    }, [])
     return(
-        <SectionContainer >
-            <SectionHeader header={"Recent Projects"}  headerClassName={"text-left text-primary"}/>
+        <SectionContainer id={PROJECT_ID}>
+            <SectionHeader id={"project_header"} header={"Recent Projects"}  headerClassName={"text-left text-primary"}/>
             <hr className={"w-32 h-2 rounded-xl bg-primary border-none"}/>
-            <div className={"mt-12 grid xl:grid-cols-3 auto-rows-max md:grid-rows-[27rem] lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 xs:grid-cols-1 gap-10"}>
+            <div ref={projectListRef} className={"mt-20 grid xl:grid-cols-3 auto-rows-max md:grid-rows-[27rem] lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 xs:grid-cols-1 gap-10"}>
                 {
                     ProjectList.map((project, key) =>
                         <div key={key} className={classNames("row-span-3 grid grid-cols-1 align-items gap-10", key === 2 ? "items-end" : key === 1 ? "items-center" : "items-start")}>
@@ -132,7 +125,6 @@ export const Projects = () => {
                                     <h2 className={"lg:text-3xl text-2xl dark:text-typo-dark-300 text-typo-light-300 font-medium"}>{project.name}</h2>
                                     <a href={project.link} target={"_blank"} className={"h-10 w-10 transition-all hover:h-12 hover:w-12 grid place-items-center rounded-full text-center block text-white bg-purple-600 text-base"}>
                                         <FaExternalLinkAlt/>
-
                                     </a>
                                 </div>
                                 <div className={"w-full mt-10"}>
@@ -140,52 +132,6 @@ export const Projects = () => {
                                 </div>
                             </div>
                         </div>
-                //     <div className={key % 2 === 0 ? "order-2" : "order-1"}>
-                //     <h2 className={"text-4xl dark:text-typo-dark-300 text-typo-light-300 text-medium"}>{project.name}</h2>
-                //     <p className={"mt-10 dark:text-typo-dark-100 text-typo-light-100"}>{project.text}</p>
-                //
-                //     <div className={"mt-10"}>
-                //     <div className={"flex flex-wrap mt-5"}>
-                // {
-                //     project.tags.map((each, k) => (
-                //     <div key={k}>
-                // {each}
-                //     </div>
-                //     ))
-                // }
-                //     </div>
-                //     </div>
-                //     <div className={"mt-10"}>
-                //     <a href={project.link} className={"bg-primary hover:bg-primaryLight text-white rounded-3xl px-4 py-2 w-32 flex flex-row items-center justify-center"}>Visit <span className={"ml-1"}><FaExternalLinkAlt/></span></a>
-                //     </div>
-                //     </div>
-                        // <div key={key} className={classNames("grid grid-rows-2 dark:bg-theme-dark-100 bg-theme-light-50 rounded-xl z-20")}>
-                        //     <div className={"relative h-56 overflow-hidden rounded-xl text-center"}>
-                        //         <div className={"w-full h-full overflow-hidden text-center grid place-items-center"}>
-                        //             <img alt={"Project Image"} className={"w-full h-full object-fill"} src={project.image.src}/>
-                        //         </div>
-                        //     </div>
-                        //     <div className={"py-5 md:px-6 px-4 "}>
-                        //         <div className={"h-1/2"}>
-                        //             <div className="flex items-center">
-                        //                 <h3 className={"dark:text-typo-dark-300 text-typo-light-300 text-lg mb-0 mr-3"}>{project.name}</h3>
-                        //                 <a className={"text-blue-400"} href=""><FaExternalLinkAlt/></a>
-                        //             </div>
-                        //             <p className={"dark:text-typo-dark-100 mt-4 text-typo-light-100 text-sm"}>{project.text}</p>
-                        //         </div>
-                        //
-                        //         <div className={"flex flex-wrap mt-5"}>
-                        //             {
-                        //                 project.tags.map((each, k) => (
-                        //                     <div key={k}>
-                        //                         {each}
-                        //                     </div>
-                        //                 ))
-                        //             }
-                        //         </div>
-                        //     </div>
-                        //
-                        // </div>
                     )
                 }
 

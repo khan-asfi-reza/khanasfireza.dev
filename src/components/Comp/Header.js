@@ -1,13 +1,26 @@
 import {useCustomTheme} from "../../hooks/useCustomTheme";
 import classnames from "classnames";
 import {FaBars, FaTimes} from "react-icons/fa";
-import {useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {ABOUT_ID, CONTACT_ID, HOME_ID, SERVICES_ID, SKILLS_ID} from "../../assets/data/ContentID";
+import {gsap} from "gsap";
 
 export default function Header() {
 
     const {toggleTheme, getThemeIcon} = useCustomTheme();
     const [navOpen, setNavOpen] = useState(false);
+    const headerLinkRef = useRef(null);
+
+    useEffect(()=>{
+
+        for (let i =0; i < headerLinkRef.current.children.length; i++){
+
+            gsap.from(headerLinkRef.current.children[i], {
+                opacity: 0,
+                y: -100,
+            })
+        }
+    }, [])
 
     const navOnClick = () => {
         setNavOpen(!navOpen)
@@ -48,7 +61,7 @@ export default function Header() {
 
                         </div>
                         <hr className={"md:hidden text-typo-dark-300 w-full m-auto my-2"}/>
-                        <div className={"md:flex-row md:h-auto h-3/4 flex flex-col justify-around"}>
+                        <div ref={headerLinkRef} className={"md:flex-row md:h-auto h-3/4 flex flex-col justify-around"}>
                             <a href={`#${HOME_ID}`} className="navbar-items text-lg dark:text-typo-dark-300 md:text-typo-light-300 text-typo-dark-300"> Home </a>
                             <a href={`#${ABOUT_ID}`} className="navbar-items text-lg dark:text-typo-dark-300 md:text-typo-light-300 text-typo-dark-300"> About </a>
                             <a href={`#${SKILLS_ID}`} className="navbar-items text-lg dark:text-typo-dark-300 md:text-typo-light-300 text-typo-dark-300"> Skills </a>

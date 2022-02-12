@@ -27,9 +27,14 @@ export default function Hero() {
             duration: 2
         })
         gsap.from(linkRef.current, {
-            delay: 3,
+            delay: 1,
             y: 100,
             opacity: 0
+        })
+        gsap.from("#scrollDownButton", {
+            x: -100,
+            opacity: 0,
+            duration: 2
         })
     }, [])
 
@@ -89,7 +94,7 @@ export default function Hero() {
                         </div>
                         <div className={"grid grid-cols-12 mt-16"}>
                             <div className={"grid md:col-start-2 col-span-12 md:place-items-start place-items-center"}>
-                                <a href={`#${ABOUT_ID}`} className={"bg-primary hover:bg-primaryLight text-white rounded-3xl px-4 py-2 w-44 flex flex-row items-center justify-center"}>Scroll Down<FaMouse/></a>
+                                <a id={"scrollDownButton"} href={`#${ABOUT_ID}`} className={"bg-primary hover:bg-primaryLight text-white rounded-3xl px-4 py-2 w-44 flex flex-row items-center justify-center"}>Scroll Down<FaMouse/></a>
                             </div>
                         </div>
                     </div>

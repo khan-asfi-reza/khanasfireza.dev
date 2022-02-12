@@ -6,6 +6,8 @@ import classnames from "classnames";
 import classNames from "classnames";
 import Arrow from "../../assets/images/arrow.png";
 import {FaBriefcase, FaLaptopCode, FaUserAlt} from "react-icons/fa";
+import {useEffect, useRef} from "react";
+import {gsap} from "gsap";
 
 
 const StatData = [
@@ -31,12 +33,53 @@ const StatData = [
 
 
 export const About = () => {
+    const ref = useRef(null);
+    const stat_data = useRef(null);
+    useEffect(()=>{
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#"+ABOUT_ID,
+            }
+        });
+        tl.from("#about_hr", {
+            width: 0,
+        })
+        tl.from("#about_heading", {
+            y: -100,
+            opacity: 0,
+        })
+        tl.from("#about_text", {
+            y: -100,
+            opacity: 0,
+        })
+        for(let i = 0; i < ref.current.children.length; i++){
+            tl.from(ref.current.children[i], {
+                duration: 0.2,
+                opacity: 0,
+                x: -10,
+            })
+        }
 
+        let sl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#about_stats",
+            }
+        });
+        sl.from(["#line", "#line_text"], {
+            x: -100,
+        })
+        Array.from(stat_data.current.children).map((each) => {
+            sl.from(each, {
+                y: 100,
+                opacity: 0,
+            })
+        })
+    }, [])
     return (
         <SectionContainer id={ABOUT_ID} className={"md:max-w-full m-auto py-10 container mx-auto relative"}>
             <div className={"grid mt-10 grid md:grid-cols-5 grid-cols-1 md:gap-32 gap-y-10 xl:px-32 gap-y-10 z-10"}>
                 <div className={"md:order-1 order-2 md:transform col-span-2 md:rotate-12"}>
-                    <div
+                    <div ref={ref}
                         className={"grid md:grid-cols-2 sm:grid-cols-3 justify-content-center grid-cols-3 md:gap-10 sm:gap-12 gap-4"}>
                         {
                             SkillContentList.map((elem, key) => (
@@ -56,28 +99,34 @@ export const About = () => {
                     </div>
                 </div>
 
+
                 <div className={"md:order-2 order-1 grid place-items-center col-span-3"}>
                     <div className={"lg:px-32 md:px-26"}>
-                        <hr className={classnames("w-32 mt-3 text-primary bg-primary h-2 rounded-xl")}/>
-                        <SectionHeader header={"About Me"} headerClassName={"text-left mt-8 text-primary"}/>
-                        <p className={"text-typo-light-300 text-lg dark:text-typo-dark-100 md:text-left  md:mt-32 mt-16"}>
+                        <hr id={"about_hr"} className={classnames("w-32 mt-3 text-primary bg-primary h-2 rounded-xl")}/>
+                        <SectionHeader id={"about_heading"} header={"About Me"} headerClassName={"text-left mt-8 text-primary"}/>
+                        <p id={"about_text"} className={"text-typo-light-300 text-lg dark:text-typo-dark-100 md:text-left  md:mt-32 mt-16"}>
                             {AboutPageText}
                         </p>
                     </div>
                 </div>
             </div>
-            <div className={"mt-32 flex md:flex-row flex-col justify-between container mx-auto gap-10"}>
+            <div id={"about_stats"} className={"mt-40 flex md:flex-row flex-col justify-between container mx-auto gap-10"}>
                 <div className={"flex flex-col justify-center"}>
-                    <h3 className={"text-5xl font-bold md:text-left text-center"}>My Stats</h3>
+                    <h3 id={"line_text"} className={"text-5xl font-bold md:text-left text-center"}>My Stats</h3>
                     <div className={"display-none md:block hidden"}>
-                        <img className={"h-32"} src={Arrow.src} alt=""/>
+                        <svg id="line"
+                              xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 256.33 150" fill={"#4e4e4e"} >
+                            <polygon points="234.17 111.61 212 98.81 212 119 12 119 12 0 0 0 0 119 0 125 0 130 212 130 212 150 234.17 137.2 256.33 124.4 234.17 111.61"
+                                      />
+                        </svg>
                     </div>
                     <div className={"md:hidden flex flex-col mt-3"}>
                         <div className={"w-1 h-10 bg-[#505153] mx-auto"}/>
                         <hr className={"w-11/12 h-1 mx-auto border border-dashed border-[#505153] bg-[#505153]"}/>
                     </div>
                 </div>
-                <div className={"grid grid-cols-3 flex-1 md:gap-0 sm:gap-10 gap-2"}>
+                <div ref={stat_data} className={"grid grid-cols-3 flex-1 md:gap-0 sm:gap-10 gap-2"}>
                     {
                         StatData.map((data, key) => (
                             <div key={key}

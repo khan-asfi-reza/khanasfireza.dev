@@ -11,10 +11,16 @@ import {SeoHead} from "../components/Comp/Head";
 import ScrollToTop from "../components/Comp/ScrollToTop";
 import {ContentParticle} from "../components/Comp/Particles";
 import {Skills} from "../components/Home/Skills";
+import {useEffect} from "react";
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 
 
 const Home = () => {
+    useEffect(()=>{
+        gsap.registerPlugin(ScrollTrigger);
+    }, [])
   return(
       <>
         <SeoHead/>

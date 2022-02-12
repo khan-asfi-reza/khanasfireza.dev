@@ -6,20 +6,41 @@ import Image from "next/image";
 import {SiFiverr, SiUpwork} from "react-icons/si";
 import {FIVERR_PROFILE, UPWORK_PROFILE} from "../../assets/data/SocialLinks";
 import {SERVICES_ID} from "../../assets/data/ContentID";
+import {useEffect, useRef} from "react";
+import {gsap} from "gsap";
 
 export const HireMe = () => {
+  const service_all = useRef(null)
+  useEffect(()=>{
+      const sl = gsap.timeline(
+          {
+              scrollTrigger: "#"+ SERVICES_ID,
+          }
+      )
+      sl.from("#service_image", {
+          opacity: 0,
+          x: -100,
+      })
+      Array.from(service_all.current.children).map(each => {
+          sl.from(each, {
+              opacity: 0,
+              y: 100,
+          })
+      })
+
+  }, [])
   return(
       <SectionContainer id={SERVICES_ID} className={"max-w-full dark:bg-theme-dark-100 bg-theme-light-100"}>
           <div className="container mx-auto mt-10 py-10">
-              <SectionHeader header={"Hire Me"} text={"Hire me for your desired project"}/>
+              <SectionHeader id={"service_section"} header={"Hire Me"} text={"Hire me for your desired project"}/>
               <SectionRow className={"mt-16"}>
-                <div className={"md:flex grid place-items-center"}>
+                <div id={"service_image"} className={"md:flex grid place-items-center"}>
                    <div className={"w-11/12"}>
                        <Image src={AllImage}  alt="Service Image"/>
                    </div>
                 </div>
                 <div className={"grid place-items-center"}>
-                    <div className={"flex flex-col justify-between py-10 h-full"}>
+                    <div ref={service_all} className={"flex flex-col justify-between py-10 h-full"}>
                         <div className={"flex flex-row items-center"}>
                             <hr className={"w-28 bg-primaryLight border-primaryLight mr-4"}/>
                             <h4 className={"font-semibold text-sm text-primaryLight"}>My Services</h4>

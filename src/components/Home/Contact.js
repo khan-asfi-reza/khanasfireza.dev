@@ -72,6 +72,9 @@ const Contact = () => {
                     loading: false,
                     sent: true
                 })
+                setTimeout(()=>{
+                    changeData({...data, sent: false})
+                }, 5000)
 
             }).catch((e) => {
                 changeData({
@@ -116,8 +119,11 @@ const Contact = () => {
                         <hr id={"contact_hr"} className={"w-32 h-1 border-none bg-indigo-400 rounded-xl mt-3"}/>
                     </div>
                     <p id={"contact_text"} className={"mt-14 dark:text-typo-dark-200 text-typo-light-200 text-xl"}>
-                        Feel free to send any message, for any enquiry <br/>
-                        Send me message to discuss about your project, Let's get connected
+                        Send me a feedback about my website and projects, for any collaboration, feel free
+                        to reach out to me, I would be happy to get connected.
+                        <br/>
+                        Send message vai this form or you can mail me at
+                         <span className={"dark:text-blue-400 text-blue-500 ml-2 "}>khanasfireza@gmail.com</span>
                     </p>
                     <div id={"contact_btn"} className={"mt-16 "}>
                         <ContactLinks/>
@@ -152,7 +158,7 @@ const Contact = () => {
                                  <p className={"text-green-300 mt-2"}>{data.error}</p>
                              }
                              {
-                                data.sent && <p className={"text-green-200 mt-2"}>Thank you for your message</p>
+                                data.sent && <p className={"text-gray-900 mt-2 text-xl"}>Thank you for your message</p>
                              }
 
                              <button  type="submit" className="flex mt-14 text-center ml-auto w-28 justify-center items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-sm text-white bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-150">

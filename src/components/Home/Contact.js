@@ -141,14 +141,14 @@ const Contact = () => {
                              <div className="relative contact_input">
                                  <label htmlFor="name" className={"text-typo-dark-400  font-medium"}>Your Name</label>
                                  <input value={data.name} onChange={onChange} id="name" name="name" type="text" required={true}
-                                        className="px-2 rounded-lg h-10 w-full bg-indigo-100 border-transparent text-typo-light-300 placeholder-transparent transition-all focus:outline-none border-2 focus:border-green-400"
+                                        className="px-2 rounded-lg h-10 w-full bg-indigo-100 border-transparent text-typo-light-400 placeholder-transparent transition-all focus:outline-none border-2 focus:border-green-400"
                                         placeholder="Name"/>
                              </div>
 
                              <div className="relative mt-14 contact_input">
                                  <label htmlFor="email" className={"text-typo-dark-400 font-medium"}>Your Email</label>
                                  <input value={data.email} onChange={onChange} id="email" name="email" type="text" required={true}
-                                        className="px-2 rounded-lg h-10 w-full bg-indigo-100 border-transparent text-typo-light-300 placeholder-transparent transition-all focus:outline-none border-2 focus:border-green-400"
+                                        className="px-2 rounded-lg h-10 w-full bg-indigo-100 border-transparent text-typo-light-400 placeholder-transparent transition-all focus:outline-none border-2 focus:border-green-400"
                                         placeholder="john@doe.com"/>
                              </div>
 
@@ -156,7 +156,7 @@ const Contact = () => {
                              <div className="mt-14 relative contact_input">
                                  <label htmlFor="message" className={"text-typo-dark-400  font-medium"}>Your Message</label>
                                  <textarea value={data.message} onChange={onChange} id="message" name={"message"} required={true}
-                                        className="px-2 rounded-lg w-full bg-indigo-100 border-transparent text-typo-light-300 placeholder-transparent transition-all focus:outline-none border-2 focus:border-green-400 resize-none h-28"
+                                        className="px-2 rounded-lg w-full bg-indigo-100 border-transparent text-typo-light-400 placeholder-transparent transition-all focus:outline-none border-2 focus:border-green-400 resize-none h-28"
                                         />
                              </div>
                              {

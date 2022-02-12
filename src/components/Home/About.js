@@ -33,7 +33,7 @@ const StatData = [
 export const About = () => {
 
     return (
-        <SectionContainer id={ABOUT_ID} className={"md:max-w-full m-auto py-10  container mx-auto relative"}>
+        <SectionContainer id={ABOUT_ID} className={"md:max-w-full m-auto py-10 container mx-auto relative"}>
             <div className={"grid mt-10 grid md:grid-cols-5 grid-cols-1 md:gap-32 gap-y-10 xl:px-32 gap-y-10 z-10"}>
                 <div className={"md:order-1 order-2 md:transform col-span-2 md:rotate-12"}>
                     <div

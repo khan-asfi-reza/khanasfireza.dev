@@ -5,6 +5,8 @@ export const UPWORK_PROFILE = "https://www.upwork.com/freelancers/~019a9fe44e386
 
 export const FIVERR_PROFILE = "https://www.fiverr.com/khanasfireza";
 
+export const LINKEDIN = "https://www.linkedin.com/in/khan-asfi-reza/"
+
 export const SocialLinksJSXList = [
     {
         "name": "Github",
@@ -15,7 +17,7 @@ export const SocialLinksJSXList = [
     {
         "name": "Linkedin",
         "icon": <FaLinkedin/>,
-        "link": "https://www.linkedin.com/in/khan-asfi-reza/",
+        "link": LINKEDIN,
         "className": "text-purple-400",
     },
     {

@@ -49,11 +49,11 @@ export default function Header() {
                         </div>
                         <hr className={"md:hidden text-typo-dark-300 w-full m-auto my-2"}/>
                         <div className={"md:flex-row md:h-auto h-3/4 flex flex-col justify-around"}>
-                            <a href={`#${HOME_ID}`} className="navbar-items text-lg dark:text-typo-dark-300 text-typo-light-300"> Home </a>
-                            <a href={`#${ABOUT_ID}`} className="navbar-items text-lg dark:text-typo-dark-300 text-typo-light-300"> About </a>
-                            <a href={`#${SKILLS_ID}`} className="navbar-items text-lg dark:text-typo-dark-300 text-typo-light-300"> Skills </a>
-                            <a href={`#${SERVICES_ID}`} className="navbar-items text-lg dark:text-typo-dark-300 text-typo-light-300"> Services </a>
-                            <a href={`#${CONTACT_ID}`} className="navbar-items text-lg dark:text-typo-dark-300 text-typo-light-300"> Contact </a>
+                            <a href={`#${HOME_ID}`} className="navbar-items text-lg dark:text-typo-dark-300 md:text-typo-light-300 text-typo-dark-300"> Home </a>
+                            <a href={`#${ABOUT_ID}`} className="navbar-items text-lg dark:text-typo-dark-300 md:text-typo-light-300 text-typo-dark-300"> About </a>
+                            <a href={`#${SKILLS_ID}`} className="navbar-items text-lg dark:text-typo-dark-300 md:text-typo-light-300 text-typo-dark-300"> Skills </a>
+                            <a href={`#${SERVICES_ID}`} className="navbar-items text-lg dark:text-typo-dark-300 md:text-typo-light-300 text-typo-dark-300"> Services </a>
+                            <a href={`#${CONTACT_ID}`} className="navbar-items text-lg dark:text-typo-dark-300 md:text-typo-light-300 text-typo-dark-300"> Contact </a>
                         </div>
                     </nav>
                     <div className={"flex flex-row justify-end items-center"}>

@@ -1,40 +1,28 @@
 import {SectionContainer} from "../Comp/SectionContainer";
 import {SectionHeader} from "../Comp/SectionHeader";
 import {SectionRow} from "../Comp/SectionRow";
-import {FaMailBulk, FaPaperPlane, FaPhone} from "react-icons/fa";
+import {FaMailBulk, FaPaperPlane, FaLinkedin, FaPhone} from "react-icons/fa";
 import classNames from "classnames";
 import {useState} from "react";
 import {CONTACT_API} from "../../assets/data/API";
 import {CONTACT_ID} from "../../assets/data/ContentID";
+import {LINKEDIN, SocialLinksJSXList} from "../../assets/data/SocialLinks";
 
-const ContactInfo = [
-    {
-        "title": "Phone",
-        "text": "+8801753489310",
-        "icon": <FaPhone/>
-    },
-    {
-        "title": "Email",
-        "text": "khanasfireza10@gmail.com",
-        "icon": <FaMailBulk/>
-    },
-    {
-        "title": "Location",
-        "text": "Dhaka, Bangladesh",
-        "icon": <FaPaperPlane/>
-    },
-]
+const ContactLinks = () =>
+    <div className={"grid grid-cols-3 gap-1 "}>
+        <a href={"mailto:khanasfireza10@gmail.com"} className={"h-14 w-14 text-lg grid place-items-center bg-indigo-400 text-typo-dark-400"}>
+            <FaMailBulk/>
+        </a>
 
-const FloatingLabel = ({text, className, ...extra}) =>
-    <label
-    {...extra}
-    className={classNames("absolute left-0 -top-5 " +
-        "dark:peer-placeholder-shown:text-typo-dark-200 peer-placeholder-shown:text-typo-light-200 text-sm transition-all " +
-        "peer-placeholder-shown:text-base " +
-        "peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 " +
-        "peer-focus:text-sm peer-focus:text-green-500 peer-valid:-top-5 " +
-        "peer-valid:text-gray-600 peer-valid:text-sm peer-valid:text-green-500", className)}>{text}
-    </label>
+        <a href={"tel:+8801753489310"} className={"h-14 w-14 text-lg grid place-items-center bg-indigo-400 text-typo-dark-400"}>
+            <FaPhone/>
+        </a>
+
+        <a href={LINKEDIN} target={"_blank"} className={"h-14 w-14 text-lg grid place-items-center bg-indigo-400 text-typo-dark-400"}>
+            <FaLinkedin/>
+        </a>
+
+    </div>
 
 
 const Contact = () => {
@@ -93,71 +81,70 @@ const Contact = () => {
     }
 
     return(
-        <SectionContainer id={CONTACT_ID} className={"z-20"}>
-            <SectionHeader header={"Contact Me"} text={"Feel free to contact me"}/>
-            <SectionRow className={"mt-20 gap-16 z-20"}>
-                <div className={"grid gap-y-12 md:mr-auto md:m-0 m-auto z-20"}>
+        <SectionContainer id={CONTACT_ID} className={"z-20  px-10"}>
+            <SectionHeader header={"Contact Me"} headerClassName={"text-left text-primaryLight"}/>
+            <div className={"grid md:grid-cols-5 grid-cols-1 mt-20 z-20 dark:bg-theme-dark-100 bg-theme-light-50 rounded-2xl z-20"}>
 
-                    {
-                        ContactInfo.map((contact, key) =>
-                            <div key={key} className={"flex flex-row "}>
-                                <div className={"text-white h-14 w-14 text-xl rounded-full mr-3 bg-primaryLight grid place-items-center"}>
-                                    {contact.icon}
-                                </div>
-                                <div>
-                                    <p className={"mb-2 text-xl text-typo-light-300 dark:text-typo-dark-300"}>{contact.title}</p>
-                                    <p className={"md:text-lg text-base text-typo-light-100 dark:text-typo-dark-100"}>{contact.text}</p>
-                                </div>
-                            </div>
-                        )
-                    }
+                <div className={"col-span-2 z-20 md:px-4 md:py-20 px-2 py-8 lg:w-9/12 md:w-full w-9/12 mx-auto "}>
+                    <div>
+                        <h2 className={"text-4xl font-semibold dark:text-indigo-100 text-indigo-900"}>Send Message</h2>
+                        <hr className={"w-32 h-1 border-none bg-indigo-400 rounded-xl mt-3"}/>
+
+                    </div>
+                    <p className={"mt-14 dark:text-typo-dark-200 text-typo-light-200 text-xl"}>
+                        Feel free to send any message, for any enquiry <br/>
+                        Send me message to discuss about your project, Let's get connected
+                    </p>
+                    <div className={"mt-16 "}>
+                        <ContactLinks/>
+                    </div>
 
                 </div>
-                <div>
-                    <div className={"z-20 dark:bg-theme-dark-100 bg-gray-200 rounded-xl bg-opacity-70 lg:w-9/12 md:w-full w-9/12 md:ml-auto m-auto h-full md:px-10 px-4 py-8"}>
-                         <h2 className={"dark:text-typo-dark-400 text-3xl text-center"}>Send Message </h2>
+                <div className={"col-span-3 bg-indigo-400 rounded-3xl border-[1rem] dark:border-theme-dark-100 border-theme-light-50"}>
+                    <div className={"rounded-2xl bg-opacity-70 lg:w-9/12 md:w-full w-9/12 m-auto h-full md:px-4 md:py-8 px-2 py-4"}>
                          <form onSubmit={onSubmit} className={"mt-10"}>
                              <div className="relative">
+                                 <label htmlFor="name" className={"text-typo-dark-400  font-medium"}>Your Name</label>
                                  <input onChange={onChange} id="name" name="name" type="text" required={true}
-                                        className="bg-transparent peer h-10 w-full border-b border-gray-300 dark:text-typo-dark-200 text-typo-light-200 placeholder-transparent focus:outline-none focus:border-green-500"
+                                        className="px-2 rounded-lg h-10 w-full bg-indigo-500 border-transparent text-typo-dark-300 placeholder-transparent transition-all focus:outline-none border-2 focus:border-green-400"
                                         placeholder="Name"/>
-                                 <FloatingLabel text={"Name"} htmlFor={"name"}/>
                              </div>
 
                              <div className="relative mt-10">
+                                 <label htmlFor="email" className={"text-typo-dark-400 font-medium"}>Your Email</label>
                                  <input onChange={onChange} id="email" name="email" type="text" required={true}
-                                        className="bg-transparent peer h-10 w-full border-b border-gray-300 dark:text-typo-dark-200 text-typo-light-200 placeholder-transparent focus:outline-none focus:border-green-500"
+                                        className="px-2 rounded-lg h-10 w-full bg-indigo-500 border-transparent text-typo-dark-300 placeholder-transparent transition-all focus:outline-none border-2 focus:border-green-400"
                                         placeholder="john@doe.com"/>
-
-                                 <FloatingLabel text={"Email"} htmlFor={"email"}/>
                              </div>
+
 
                              <div className="mt-10 relative">
+                                 <label htmlFor="message" className={"text-typo-dark-400  font-medium"}>Your Message</label>
                                  <textarea onChange={onChange} id="message" name={"message"} required={true}
-                                        className="bg-transparent resize-none  overflow-y-auto peer h-20 py-4 w-full border-b border-gray-300 dark:text-typo-dark-200 text-typo-light-200 placeholder-transparent focus:outline-none focus:border-green-500"
-                                        placeholder="Password"/>
-                                 <FloatingLabel text={"Message"} htmlFor={"message"}/>
+                                        className="px-2 rounded-lg w-full bg-indigo-500 border-transparent text-typo-dark-300 placeholder-transparent transition-all focus:outline-none border-2 focus:border-green-400 resize-none h-28"
+                                        />
                              </div>
                              {
-                                 <p className={"text-red-400 mt-2"}>{data.error}</p>
+                                 <p className={"text-green-300 mt-2"}>{data.error}</p>
                              }
                              {
                                 data.sent && <p className={"text-green-500 mt-2"}>Thank you for your message</p>
                              }
 
-                             <button  type="submit" className="flex mt-14 text-center w-full justify-center items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-white bg-green-500 hover:bg-green-600 transition ease-in-out duration-150">
+                             <button  type="submit" className="flex mt-14 text-center ml-auto w-28 justify-center items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-sm text-white bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-150">
                                  {data.loading && <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
                                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
                                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/>
                                  </svg>}
-                                 Send
+                                 Send <FaPaperPlane/>
                              </button>
                          </form>
                     </div>
                 </div>
 
-            </SectionRow>
+
+            </div>
         </SectionContainer>
     )
 }

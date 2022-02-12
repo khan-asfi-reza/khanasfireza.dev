@@ -12,7 +12,7 @@ const headerClassNameFunc = () => classnames("font-semibold md:text-6xl xs:text-
 export function Experience() {
 
     return (
-        <SectionContainer className={"relative mt-40"}>
+        <SectionContainer className={"relative mt-40  overflow-hidden "}>
 
             <div className={"xl:px-32 lg:px-10 grid md:grid-cols-2 mt-10 xl:gap-20  lg:gap-16 md:gap-5 gap-y-14"}>
                 <div className={"relative md:text-left text-center"}>
@@ -25,7 +25,7 @@ export function Experience() {
                 {
                     ExperienceContent.map((elem, key) => (
 
-                        <div key={key} className={classNames("w-96  dark:bg-theme-dark-100 bg-theme-light-50 p-8 relative rounded-xl  md:mx-0 mx-auto", key%2===0? "md:ml-auto": "")}>
+                        <div key={key} className={classNames("md:w-96 w-full  dark:bg-theme-dark-100 bg-theme-light-50 p-8 relative rounded-xl  md:mx-0 mx-auto", key%2===0? "md:ml-auto": "")}>
                             <div className={classnames("absolute h-16 w-16 rounded-full grid place-items-center dark:bg-theme-dark-200 border-4 dark:border-theme-dark-100 bg-theme-light-200 -top-6 text-3xl", elem.color)}>
                                 {elem.icon}
                             </div>

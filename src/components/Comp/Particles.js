@@ -8,7 +8,7 @@ export const ContentParticle = ({id}) => {
             <Particles id={id || "particle"}
                        style={{position: "absolute"}}
                        options={{fullScreen: false,
-                           fpsLimit: 120,
+                           fpsLimit: 30,
                            interactivity: {
                                events: {
                                    onClick: {
@@ -51,7 +51,7 @@ export const ContentParticle = ({id}) => {
                                number: {
                                    density: {
                                        enable: true,
-                                       area: 4000,
+                                       area: 5000,
 
                                    },
                                    value: 80,

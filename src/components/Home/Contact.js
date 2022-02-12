@@ -77,10 +77,15 @@ const Contact = () => {
                 }, 5000)
 
             }).catch((e) => {
+                console.log(e.response);
                 changeData({
                     loading: false,
                     error: "Unable to send message, please try again. " +
-                              "Or send mail to my email address"})
+                              "Or send mail to my email address",
+                    name: "",
+                    email: "",
+                    message: "",
+                })
             })
         }
 

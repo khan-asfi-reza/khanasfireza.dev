@@ -57,9 +57,9 @@ export default function Hero() {
 
                 }
                 <div ref={imageRef} className={"mt-3 xL:ml-auto lg:order-2 order-1 lg:w-full w-10/12 m-auto auto-rows-min auto-cols-min"}>
-                    <ContentImage src={HomeImage} divClassName={"relative"}>
-                        <ObjectImage src={"/images/Bubble.png"} className={"z-50 absolute md:h-12 md:w-12 h-11 w-11 md:-top-2 md:left-2 -top-2 animate-float"}/>
-                        <ObjectImage src={"/images/Bubble.png"} className={"z-50 absolute md:h-11 md:w-11 h-10 w-10 md:top-2 left-1/4 top-2 animate-float animation-delay-4"}/>
+                    <ContentImage alt={"Khan Asfi Reza"} src={HomeImage} divClassName={"relative"}>
+                        <ObjectImage alt={"Object Image"} src={"/images/Bubble.png"} className={"z-50 absolute md:h-12 md:w-12 h-11 w-11 md:-top-2 md:left-2 -top-2 animate-float"}/>
+                        <ObjectImage alt={"Object Image"} src={"/images/Bubble.png"} className={"z-50 absolute md:h-11 md:w-11 h-10 w-10 md:top-2 left-1/4 top-2 animate-float animation-delay-4"}/>
                     </ContentImage>
 
                 </div>
@@ -70,6 +70,8 @@ export default function Hero() {
                                 {
                                     SocialLinksJSXList.map(({name, className, icon, link}, key) => (
                                         <a  key={key}
+                                            name={name}
+                                            title={name}
                                             aria-label={`${name} link`}
                                             referrerPolicy={"strict-origin"}
                                             href={link}
@@ -84,9 +86,8 @@ export default function Hero() {
                             </div>
 
                             <div ref={textRef} className={"order-1 md:order-2 col-span-11 md:mt-0 mt-4 md:text-left text-center"}>
-                                <h2 className={h1ClassName}>Hi I'm <br/></h2>
-                                <h1 className={`${h1ClassName} 2xl:mt-7 mt-5`}>{HomePageIntroName}</h1>
-                                <h3 className={h3ClassName}>{HomePageIntroTitle}</h3>
+                                <h1 className={`${h1ClassName} 2xl:mt-7 mt-5`}>Hi I'm <br/>{HomePageIntroName}</h1>
+                                <p className={h3ClassName}>{HomePageIntroTitle}</p>
                                 <p className={pClassName}>
                                     {HomePageIntroText()}
                                 </p>

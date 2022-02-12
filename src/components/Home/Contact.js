@@ -9,15 +9,15 @@ import {LINKEDIN} from "../../assets/data/SocialLinks";
 
 const ContactLinks = () =>
     <div className={"grid grid-cols-3 gap-1 "}>
-        <a href={"mailto:khanasfireza10@gmail.com"} className={"h-14 w-14 text-lg grid place-items-center bg-blue-400 text-typo-dark-400"}>
+        <a name={"Send Email"} title={"Send Email"} href={"mailto:khanasfireza10@gmail.com"} className={"h-14 w-14 text-lg grid place-items-center bg-blue-400 text-typo-dark-400"}>
             <FaMailBulk/>
         </a>
 
-        <a href={"tel:+8801753489310"} className={"h-14 w-14 text-lg grid place-items-center bg-blue-400 text-typo-dark-400"}>
+        <a name={"Call Phone"} title={"Call"} href={"tel:+8801753489310"} className={"h-14 w-14 text-lg grid place-items-center bg-blue-400 text-typo-dark-400"}>
             <FaPhone/>
         </a>
 
-        <a href={LINKEDIN} target={"_blank"} className={"h-14 w-14 text-lg grid place-items-center bg-blue-400 text-typo-dark-400"}>
+        <a name={"LinkedIn"} title={"LinkedIn"} href={LINKEDIN} target={"_blank"} className={"h-14 w-14 text-lg grid place-items-center bg-blue-400 text-typo-dark-400"}>
             <FaLinkedin/>
         </a>
 
@@ -77,7 +77,7 @@ const Contact = () => {
                 }, 5000)
 
             }).catch((e) => {
-                console.log(e.response);
+                console.log(e.message);
                 changeData({
                     loading: false,
                     error: "Unable to send message, please try again. " +

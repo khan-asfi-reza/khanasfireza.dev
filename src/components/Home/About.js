@@ -4,7 +4,6 @@ import {SectionHeader} from "../Comp/SectionHeader";
 import {ABOUT_ID} from "../../assets/data/ContentID";
 import classnames from "classnames";
 import classNames from "classnames";
-import Arrow from "../../assets/images/arrow.png";
 import {FaBriefcase, FaLaptopCode, FaUserAlt} from "react-icons/fa";
 import {useEffect, useRef} from "react";
 import {gsap} from "gsap";
@@ -83,7 +82,7 @@ export const About = () => {
                         className={"grid md:grid-cols-2 sm:grid-cols-3 justify-content-center grid-cols-3 md:gap-10 sm:gap-12 gap-4"}>
                         {
                             SkillContentList.map((elem, key) => (
-                                <div
+                                <div key={key}
                                     className={"aspect-square md:p-0 sm:p-4 p-2 py-4 rounded-xl dark:bg-theme-dark-100 bg-theme-light-50 grid place-items-center"}>
                                     <div className={"text-center"}>
                                         <div

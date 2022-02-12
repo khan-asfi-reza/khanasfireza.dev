@@ -8,11 +8,13 @@ function MyApp({ Component, pageProps }) {
 
   return(
       <>
-          <ThemeProvider enableSystem={false} defaultTheme={"dark"} attribute={"class"}>
-              <Layout>
-                  <Component {...pageProps} />
-              </Layout>
-          </ThemeProvider>
+
+              <ThemeProvider enableSystem={false} defaultTheme={"dark"} attribute={"class"}>
+                  <Layout>
+                      <Component {...pageProps} />
+                  </Layout>
+              </ThemeProvider>
+
       </>
   )
 }

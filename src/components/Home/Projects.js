@@ -123,12 +123,13 @@ export const Projects = () => {
                             <div className={"py-2 "}>
                                 <div className={"flex justify-between"}>
                                     <h2 className={"lg:text-3xl text-2xl dark:text-typo-dark-300 text-typo-light-300 font-medium"}>{project.name}</h2>
-                                    <a href={project.link} target={"_blank"} className={"h-10 w-10 transition-all hover:h-12 hover:w-12 grid place-items-center rounded-full text-center block text-white bg-purple-600 text-base"}>
+                                    <a href={project.link} name={"VisitProject"} title={"Visit"}
+                                       target={"_blank"} className={"h-10 w-10 transition-all hover:h-12 hover:w-12 grid place-items-center rounded-full text-center block text-white bg-purple-600 text-base"}>
                                         <FaExternalLinkAlt/>
                                     </a>
                                 </div>
                                 <div className={"w-full mt-10"}>
-                                    <Image src={project.image}/>
+                                    <Image alt={"Project Image"} src={project.image}/>
                                 </div>
                             </div>
                         </div>

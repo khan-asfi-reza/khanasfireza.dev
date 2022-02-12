@@ -54,10 +54,10 @@ export const HireMe = () => {
                             I hope I will be able to deliver you a great product that your business requires.
                         </p>
                         <div className={"md:mt-2 mt-6 flex flex-row"}>
-                            <a target={"_blank"} href={UPWORK_PROFILE} className={"px-4 py-2 mr-8 rounded-full bg-green-600 text-white flex items-center hover:bg-green-700 transition-all"}>
+                            <a target={"_blank"} title={"Upwork"} name={"Upwork"} href={UPWORK_PROFILE} className={"px-4 py-2 mr-8 rounded-full bg-emerald-500 text-white flex items-center hover:bg-emerald-600 transition-all"}>
                                 <span className={"mr-2"}>Upwork</span> <SiUpwork/>
                             </a>
-                            <a target={"_blank"} href={FIVERR_PROFILE} className={"px-4 py-2 rounded-full bg-green-500 text-white flex items-center text-xl hover:bg-green-700 transition-all"}>
+                            <a target={"_blank"} title={"Fiverr"} name={"Fiverr"} href={FIVERR_PROFILE} className={"px-4 py-2 rounded-full bg-green-500 text-white flex items-center text-xl hover:bg-green-600 transition-all"}>
                                 <span className={"mr-2"}>Fiverr</span> <SiFiverr />
                             </a>
                         </div>

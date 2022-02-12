@@ -81,15 +81,14 @@ const Contact = () => {
     }
 
     return(
-        <SectionContainer id={CONTACT_ID} className={"z-20  px-10"}>
+        <SectionContainer id={CONTACT_ID} className={""}>
             <SectionHeader header={"Contact Me"} headerClassName={"text-left text-primaryLight"}/>
             <div className={"grid md:grid-cols-5 grid-cols-1 mt-20 z-20 dark:bg-theme-dark-100 bg-theme-light-50 rounded-2xl z-20"}>
 
-                <div className={"col-span-2 z-20 md:px-4 md:py-20 px-2 py-8 lg:w-9/12 md:w-full w-9/12 mx-auto "}>
+                <div className={"col-span-2 z-20 md:px-4 md:py-20 px-2 py-8 lg:w-9/12 md:w-full w-11/12 mx-auto "}>
                     <div>
                         <h2 className={"text-4xl font-semibold dark:text-indigo-100 text-indigo-900"}>Send Message</h2>
                         <hr className={"w-32 h-1 border-none bg-indigo-400 rounded-xl mt-3"}/>
-
                     </div>
                     <p className={"mt-14 dark:text-typo-dark-200 text-typo-light-200 text-xl"}>
                         Feel free to send any message, for any enquiry <br/>
@@ -101,7 +100,7 @@ const Contact = () => {
 
                 </div>
                 <div className={"col-span-3 bg-indigo-400 rounded-3xl border-[1rem] dark:border-theme-dark-100 border-theme-light-50"}>
-                    <div className={"rounded-2xl bg-opacity-70 lg:w-9/12 md:w-full w-9/12 m-auto h-full md:px-4 md:py-8 px-2 py-4"}>
+                    <div className={"rounded-2xl bg-opacity-70 lg:w-9/12 md:w-full w-11/12 m-auto h-full md:px-4 md:py-8 px-2 py-4"}>
                          <form onSubmit={onSubmit} className={"mt-10"}>
                              <div className="relative">
                                  <label htmlFor="name" className={"text-typo-dark-400  font-medium"}>Your Name</label>

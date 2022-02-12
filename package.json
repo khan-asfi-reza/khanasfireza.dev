@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export"
+    "build": "next build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",

@@ -81,7 +81,9 @@ const Contact = () => {
     }
 
     useEffect(()=>{
-        const sl = gsap.timeline();
+        const sl = gsap.timeline({
+            scrollTrigger: "#"+CONTACT_ID,
+        });
         sl.from(".contact_input", {
             x: 100,
         })

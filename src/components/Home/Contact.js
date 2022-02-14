@@ -108,7 +108,6 @@ const Contact = () => {
         })
         sl.from(["#contact_hr",], {
             opacity: 0,
-            width: 0,
         })
         sl.from(["#contact_text", "#contact_btn"], {
             opacity: 0,

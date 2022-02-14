@@ -41,7 +41,7 @@ export const About = () => {
             }
         });
         tl.from("#about_hr", {
-            width: 0,
+            opacity: 0,
         })
         tl.from("#about_heading", {
             y: -100,

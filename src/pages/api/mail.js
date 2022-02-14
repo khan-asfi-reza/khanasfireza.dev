@@ -132,8 +132,8 @@ export default async function mailAPI(req, res) {
 <div style="font-family: Tahoma, Verdana, sans-serif">
 <div style="font-size: 12px; font-family: 'Source Sans Pro', Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #555555; line-height: 1.2;">
 
-<p style="margin: 0; font-size: 18px;"><strong>IP: ${detectedIp}</strong></p>
-<p style="margin: 0; font-size: 18px;"><strong>User Agent: ${req.headers["user-agent"]}</strong></p>
+<p style="margin: 0; font-size: 15px;"><strong>IP: ${detectedIp}</strong></p>
+<p style="margin: 0; font-size: 15px;"><strong>User Agent: ${req.headers["user-agent"]}</strong></p>
 \t<br>
 <p style="margin: 0; font-size: 18px;"><strong>From ${body.name},</strong></p>
 <p style="margin: 0; font-size: 18px;"><strong>${body.email}</strong></p>
@@ -141,8 +141,8 @@ export default async function mailAPI(req, res) {
 <p style="margin: 0; font-size: 18px;"><span style="font-size:15px;"><strong>${body.message}</strong></span></p>
 \t<br>
 \t<br>
-<p style="margin: 0; font-size: 18px;"><span style="font-size:15px;"><strong>To,</strong></span></p>
-<p style="margin: 0; font-size: 18px;"><span style="font-size:15px;"><strong>Khan Asfi Reza</strong></span></p>
+<p style="margin: 0; font-size: 18px;"><span style="font-size:18px;"><strong>To,</strong></span></p>
+<p style="margin: 0; font-size: 18px;"><span style="font-size:18px;"><strong>Khan Asfi Reza</strong></span></p>
 </div>
 </div>
 </td>

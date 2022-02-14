@@ -23,7 +23,7 @@ export default async function mailAPI(req, res) {
     const data = {
         to: process.env.EMAIL,
         from: 'info@khanasfireza.dev',
-        subject: "Message from your website - Khan Asfi Reza",
+        subject: `Khan Asfi Reza Message from your website - Sent By ${body.name}`,
         html: `
         <!DOCTYPE html>
 

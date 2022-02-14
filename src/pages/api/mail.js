@@ -135,14 +135,14 @@ export default async function mailAPI(req, res) {
 <p style="margin: 0; font-size: 15px;"><strong>IP: ${detectedIp}</strong></p>
 <p style="margin: 0; font-size: 15px;"><strong>User Agent: ${req.headers["user-agent"]}</strong></p>
 \t<br>
-<p style="margin: 0; font-size: 18px;"><strong>From ${body.name},</strong></p>
-<p style="margin: 0; font-size: 18px;"><strong>${body.email}</strong></p>
+<p style="margin: 0; font-size: 20px;"><strong>From ${body.name},</strong></p>
+<p style="margin: 0; font-size: 20px;"><strong>${body.email}</strong></p>
 \t<br>
-<p style="margin: 0; font-size: 18px;"><span style="font-size:15px;"><strong>${body.message}</strong></span></p>
+<p style="margin: 0; font-size: 20px;"><span style="font-size:20px;">${body.message}</span></p>
 \t<br>
 \t<br>
-<p style="margin: 0; font-size: 18px;"><span style="font-size:18px;"><strong>To,</strong></span></p>
-<p style="margin: 0; font-size: 18px;"><span style="font-size:18px;"><strong>Khan Asfi Reza</strong></span></p>
+<p style="margin: 0; font-size: 20px;"><span style="font-size:18px;"><strong>To,</strong></span></p>
+<p style="margin: 0; font-size: 20px;"><span style="font-size:18px;"><strong>Khan Asfi Reza</strong></span></p>
 </div>
 </div>
 </td>

@@ -95,7 +95,7 @@ export default function Hero() {
                         </div>
                         <div className={"grid grid-cols-12 mt-16"}>
                             <div className={"grid md:col-start-2 col-span-12 md:place-items-start place-items-center"}>
-                                <a id={"scrollDownButton"} href={`#${ABOUT_ID}`} className={"bg-primary hover:bg-primaryLight text-white rounded-3xl px-4 py-2 w-44 flex flex-row items-center justify-center"}>Learn More<FaMouse/></a>
+                                <a id={"scrollDownButton"} href={`#${ABOUT_ID}`} className={"bg-primary hover:bg-primaryLight text-white rounded-full px-6 py-4 w-44 flex flex-row items-center justify-center"}>Learn More<FaMouse/></a>
                             </div>
                         </div>
                     </div>

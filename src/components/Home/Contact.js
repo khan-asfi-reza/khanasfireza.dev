@@ -144,22 +144,22 @@ const Contact = () => {
                              <div className="relative contact_input">
                                  <label htmlFor="name" className={"text-typo-dark-400  font-medium"}>Your Name</label>
                                  <input value={data.name} onChange={onChange} id="name" name="name" type="text" required={true}
-                                        className="px-2 rounded-lg h-10 w-full bg-indigo-100 border-transparent text-typo-light-400 placeholder-transparent transition-all focus:outline-none border-2 focus:border-green-400"
+                                        className="px-2 rounded-lg h-10 w-full bg-white border-transparent text-typo-light-400 placeholder-transparent transition-all focus:outline-none border-2 focus:border-green-400"
                                         placeholder="Name"/>
                              </div>
 
-                             <div className="relative mt-14 contact_input">
+                             <div className="relative mt-10 contact_input">
                                  <label htmlFor="email" className={"text-typo-dark-400 font-medium"}>Your Email</label>
                                  <input value={data.email} onChange={onChange} id="email" name="email" type="text" required={true}
-                                        className="px-2 rounded-lg h-10 w-full bg-indigo-100 border-transparent text-typo-light-400 placeholder-transparent transition-all focus:outline-none border-2 focus:border-green-400"
+                                        className="px-2 rounded-lg h-10 w-full bg-white border-transparent text-typo-light-400 placeholder-transparent transition-all focus:outline-none border-2 focus:border-green-400"
                                         placeholder="john@doe.com"/>
                              </div>
 
 
-                             <div className="mt-14 relative contact_input">
+                             <div className="mt-10 relative contact_input">
                                  <label htmlFor="message" className={"text-typo-dark-400  font-medium"}>Your Message</label>
                                  <textarea value={data.message} onChange={onChange} id="message" name={"message"} required={true}
-                                        className="px-2 rounded-lg w-full bg-indigo-100 border-transparent text-typo-light-400 placeholder-transparent transition-all focus:outline-none border-2 focus:border-green-400 resize-none h-28"
+                                        className="px-2 rounded-lg w-full bg-white border-transparent text-typo-light-400 placeholder-transparent transition-all focus:outline-none border-2 focus:border-green-400 resize-none h-28"
                                         />
                              </div>
                              {
@@ -169,7 +169,7 @@ const Contact = () => {
                                 data.sent && <p className={"text-gray-900 mt-2 text-xl"}>Thank you for your message</p>
                              }
 
-                             <button  type="submit" className="flex mt-14 text-center ml-auto w-28 justify-center items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-sm text-white bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-150">
+                             <button  type="submit" className="flex mt-14 text-center ml-auto w-28 justify-center items-center px-4 py-2 font-semibold leading-6 text-lg shadow rounded-sm text-white bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-150">
                                  {data.loading && <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
                                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>

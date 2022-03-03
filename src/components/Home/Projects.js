@@ -4,11 +4,9 @@ import Funskul from "../../assets/images/project2.png";
 import Referral from "../../assets/images/project3.png";
 import classNames from "classnames";
 import {SectionHeader} from "../Comp/SectionHeader";
-import Image from "next/image";
-import {FaExternalLinkAlt} from "react-icons/fa";
-import {useEffect, useRef} from "react";
-import {gsap} from "gsap";
+import {useRef} from "react";
 import {PROJECT_ID} from "../../assets/data/ContentID";
+import {GallerySlides} from "../Comp/Slide";
 
 const TagClassName = (...args) => classNames("px-4 mr-2 mt-2 py-2 text-xs font-bold  rounded-2xl", ...args)
 
@@ -56,19 +54,21 @@ const JS = () => (
 
 const ProjectList = [
     {
-        "name": "BlogSpot",
-        "image": BlogSpot,
+        "title": "BlogSpot",
+        "image": BlogSpot.src,
         "text": <>
             Blogspot is a blog site, similar to reddit or twitter
-            A person can create account, login and them upload contents and images. <br/> A person can create their profile
-            update it or change it whenever he or she wants. A user can follow multiple other users and create connection,
+            A person can create account, login and them upload contents and images. <br/> A person can create their
+            profile
+            update it or change it whenever he or she wants. A user can follow multiple other users and create
+            connection,
             A user can subscribe to any content creator.<br/> This web app is built using HTML, CSS, Django, Python</>,
         "tags": [<Python/>, <HTML/>, <CSS/>, <JS/>],
         "link": "https://khan-asfi-reza.github.io/Blog-Spot/"
     },
     {
-        "name": "Funskul",
-        "image": Funskul,
+        "title": "Funskul",
+        "image": Funskul.src,
         "tags": [<HTML/>, <CSS/>, <JS/>],
         "text": <>
             Funskul is a interactive learning platform for extra curricular activities, generally Online Learning
@@ -81,11 +81,12 @@ const ProjectList = [
 
     },
     {
-        "name": "Referral",
-        "image": Referral,
+        "title": "Referral",
+        "image": Referral.src,
         "tags": [<Python/>, <Svelte/>, <CSS/>, <Django/>],
         "text": <>
-        We all have seen referral marketing strategies and websites that enables users to refer others and provide them
+            We all have seen referral marketing strategies and websites that enables users to refer others and provide
+            them
             discounts or profits and also by inviting others a user can earn profit, This project is similar to that.
             But this is only for referring other users to get loan for properties, if a user can invite other people to
             close a loan or deal, the user can earn good amount of profit.
@@ -97,45 +98,17 @@ const ProjectList = [
 
 
 export const Projects = () => {
-    const projectListRef = useRef(null);
-    useEffect(()=>{
-        const sl = gsap.timeline({
-            scrollTrigger: "#"+PROJECT_ID
-        })
-        sl.from("#project_header", {
-            opacity: 0,
-            x: -100
-        })
-        Array.from(projectListRef.current.children).map(each => {
-            sl.from(each, {
-                y: 100,
-            })
-        })
-    }, [])
-    return(
-        <SectionContainer id={PROJECT_ID}>
-            <SectionHeader id={"project_header"} header={"Recent Projects"}  headerClassName={"text-left text-primary"}/>
-            <hr className={"w-32 h-2 rounded-xl bg-primary border-none"}/>
-            <div ref={projectListRef} className={"mt-20 grid xl:grid-cols-3 auto-rows-max md:grid-rows-[27rem] lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 xs:grid-cols-1 gap-10"}>
-                {
-                    ProjectList.map((project, key) =>
-                        <div key={key} className={classNames("row-span-3 grid grid-cols-1 align-items gap-10", key === 2 ? "items-end" : key === 1 ? "items-center" : "items-start")}>
-                            <div className={"py-2 "}>
-                                <div className={"flex justify-between"}>
-                                    <h2 className={"lg:text-3xl text-2xl dark:text-typo-dark-300 text-typo-light-300 font-medium"}>{project.name}</h2>
-                                    <a href={project.link} name={"VisitProject"} title={"Visit"}
-                                       target={"_blank"} className={"h-10 w-10 transition-all hover:h-12 hover:w-12 grid place-items-center rounded-full text-center block text-white bg-purple-600 text-base"}>
-                                        <FaExternalLinkAlt/>
-                                    </a>
-                                </div>
-                                <div className={"w-full mt-10"}>
-                                    <Image alt={"Project Image"} src={project.image}/>
-                                </div>
-                            </div>
-                        </div>
-                    )
-                }
+    const containerRef = useRef(null);
 
+    return (
+        <SectionContainer id={PROJECT_ID}>
+            <SectionHeader id={"project_header"} header={"Recent Projects"} headerClassName={"text-left text-primary"}/>
+            <hr className={"w-32 h-2 rounded-xl bg-primary border-none"}/>
+            <div className={"md:py-10 py-4"}>
+                <div ref={containerRef}
+                     className={"flex justify-center items-center relative overflow-hidden box-border md:container md:mx-auto py-10 px-5 rounded-2xl"}>
+                    <GallerySlides slides={ProjectList} parentRef={containerRef}/>
+                </div>
             </div>
         </SectionContainer>
     )

@@ -1,3 +1,4 @@
+import '../assets/css/slide.css';
 import '../assets/css/global.css';
 import {ThemeProvider} from "next-themes"
 import Layout from "../container/Layout/Layout";

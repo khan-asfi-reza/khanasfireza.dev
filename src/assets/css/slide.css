@@ -44,9 +44,6 @@
     }
 }
 
-.slide-overlay{
-    @apply absolute h-full w-full z-10 bg-black opacity-40;
-}
 
 .slide-content-inner {
     transform-style: preserve-3d;

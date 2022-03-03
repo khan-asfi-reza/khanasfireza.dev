@@ -101,7 +101,7 @@ function Slide({ slide, offset, parentRef }) {
                 >
 
                     <div className="slide-content-inner">
-                        <a href={slide.href} target={"_blank"} className="slideTitle lg:text-5xl font-semibold text-blue-500">{slide.title}</a>
+                        <a href={slide.href} target={"_blank"} className={"slideTitle lg:text-5xl font-semibold " + slide.color}>{slide.title}</a>
                         <p className="slideDescription text-gray-300">{slide.description}</p>
                     </div>
                 </div>

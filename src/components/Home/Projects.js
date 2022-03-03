@@ -56,6 +56,7 @@ const ProjectList = [
     {
         "title": "BlogSpot",
         "image": BlogSpot.src,
+        color: "text-white",
         "text": <>
             Blogspot is a blog site, similar to reddit or twitter
             A person can create account, login and them upload contents and images. <br/> A person can create their
@@ -69,6 +70,7 @@ const ProjectList = [
     {
         "title": "Funskul",
         "image": Funskul.src,
+        color: "text-black",
         "tags": [<HTML/>, <CSS/>, <JS/>],
         "text": <>
             Funskul is a interactive learning platform for extra curricular activities, generally Online Learning
@@ -83,6 +85,7 @@ const ProjectList = [
     {
         "title": "Referral",
         "image": Referral.src,
+        color: "text-black",
         "tags": [<Python/>, <Svelte/>, <CSS/>, <Django/>],
         "text": <>
             We all have seen referral marketing strategies and websites that enables users to refer others and provide

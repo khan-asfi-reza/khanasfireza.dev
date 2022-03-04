@@ -1,9 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
+.carousel{
+    @apply relative h-full w-10/12 mx-auto my-0;
+}
+
+.carousel-container{
+    @apply relative overflow-hidden h-full;
+}
+
+
+
+.carousel-track{
+    @apply p-2 m-0 list-none relative transition-all h-full duration-700 box-border;
+
+}
+
+.carousel-slide{
+    @apply absolute top-0 bottom-0 w-full z-10 box-border transition-transform transform;
+}
+
+.carousel-inactive{
+    @apply transform scale-90 transition-transform;
+}
+
+.carousel-active{
+    @apply scale-100 duration-700 ;
+}
+
+.carousel-button{
+    @apply absolute top-1/2 transform -translate-y-1/2 z-20;
+}
+
+.cb-left{
+    @apply -left-5;
+}
+
+.cb-right{
+    @apply -right-5;
+}
 
 
 *{
@@ -92,10 +127,10 @@
 
 /* width */
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 10px;
 }
 
-/* Track */
+    /* Track */
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 2px grey;
     border-radius: 2px;
@@ -103,14 +138,19 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    @apply bg-gray-700;
+    @apply bg-gray-700 transition-all duration-500 rounded-xl;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    @apply bg-gray-800;
+    @apply bg-gray-800 transition-all duration-500 cursor-pointer;
+    width: 15px;
 }
 
 .transition-position{
     transition: top, left, right, bottom, margin-top, margin-left, margin-bottom, margin-right 500ms;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -6,6 +6,7 @@ import {SKILLS_ID} from "../../assets/data/ContentID";
 import {AllSkillContents} from "../../assets/data/Content";
 import {useEffect, useRef, useState} from "react";
 import classNames from "classnames";
+import Carousel, {CarouselSlide} from "../../components/Carousel";
 
 
 const WorkingExperience = [
@@ -33,28 +34,9 @@ const WorkingExperience = [
 
 export const Skills = () => {
    const [current, setCurrent] = useState(0);
-   const headRef = useRef(null);
+
    const workingRef = useRef(null);
 
-   const changingStateAnimation = () => {
-       return setTimeout(() => {
-           gsap.from(headRef.current, {
-               opacity: 0,
-               duration: 1,
-               y: -10,
-           })
-           setCurrent(current ? 0 : 1);
-
-       }, 10000);
-   }
-
-
-   useEffect(()=>{
-       const interval = changingStateAnimation()
-       return () => {
-           clearInterval(interval);
-       }
-   }, [current])
 
    useEffect(()=>{
        let sl = gsap.timeline({
@@ -66,13 +48,12 @@ export const Skills = () => {
            opacity: 0,
            x: -100,
        })
-       Array.from(headRef.current.children).map(each => {
-           sl.from(each, {
-               opacity: 0,
-               y: 10,
-               duration: 0.1
-           })
+
+       sl.from("#SKILL_CAROUSEL", {
+           opacity: 0,
+           x: -100
        })
+
        Array.from(workingRef.current.children).map(each => {
            sl.from(each, {
                opacity: 0,
@@ -93,24 +74,27 @@ export const Skills = () => {
                           technical tools. I have worked with 3 Companies and several clients to provide services.
                       </p>
                   </div>
-                  <div className={"mt-12"}>
+                  <div id={"SKILL_CAROUSEL"} className={"mt-12"}>
                       <h2 className={"dark:text-typo-dark-400 text-typo-light-400 text-4xl font-semibold"}>Skills</h2>
-                      <div ref={headRef} className={"grid grid-cols-3 md:gap-10 gap-3 gap-y-10 mt-12"}>
-                          {
-                              AllSkillContents[current].map(
-                                  (content, key) => (
-                                      <div key={key} id={`skill_content_${key}`} className={classNames("transition-all")}>
-                                          <div className={"md:h-20 h-16"}>
-                                              <img className={"md:h-20 h-16"} src={content.logo.src} alt={content.name}/>
+                      <Carousel autoplay controls={false} navigation={false}>
+                          {AllSkillContents.map((each, key) => (
+                              <CarouselSlide className={"w-full mx-auto"} key={key}>
+                                      <div  className={"grid grid-cols-3 md:gap-10 gap-3 gap-y-10 mt-12"}>
+                                          {each.map((content, k) => (
+                                          <div key={k} id={`skill_content_${key}`} className={classNames("transition-all")}>
+                                              <div className={"md:h-20 h-16"}>
+                                                  <img className={"md:h-20 h-16"} src={content.logo.src} alt={content.name}/>
+                                              </div>
+                                              <p className={"text-base dark:text-typo-dark-100 text-typo-light-200 mt-5"}>
+                                                  {content.name}
+                                              </p>
                                           </div>
-                                          <p className={"text-base dark:text-typo-dark-100 text-typo-light-200 mt-5"}>
-                                              {content.name}
-                                          </p>
+                                          ))}
                                       </div>
-                                  )
-                              )
-                          }
-                      </div>
+
+                              </CarouselSlide>
+                          ))}
+                      </Carousel>
                   </div>
               </div>
 

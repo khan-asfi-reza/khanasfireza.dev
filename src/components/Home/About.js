@@ -125,11 +125,11 @@ export const About = () => {
                         <hr className={"w-11/12 h-1 mx-auto border border-dashed border-[#505153] bg-[#505153]"}/>
                     </div>
                 </div>
-                <div ref={stat_data} className={"grid grid-cols-3 flex-1 md:gap-0 sm:gap-10 gap-2"}>
+                <div ref={stat_data}>
                     {
                         StatData.map((data, key) => (
                             <div key={key}
-                                 className={"xl:w-9/12 lg:w-10/12 md:w-11/12 w-full text-center mx-auto p-5 border-gray-200 border dark:bg-theme-dark-100 bg-theme-light-50 flex flex-col justify-items-center items-center rounded-xl"}>
+                                 className={"xl:w-11/12 lg:w-10/12 md:w-11/12 w-full text-center mx-auto p-5 border-gray-200 border dark:bg-theme-dark-100 bg-theme-light-50 flex flex-col justify-items-center items-center rounded-xl m-4"}>
                                 <div className={classnames("lg:text-5xl md:text-4xl text-3xl", data.color)}>
                                     {data.logo}
                                 </div>

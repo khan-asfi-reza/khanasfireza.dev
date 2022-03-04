@@ -133,7 +133,7 @@ export const SkillContentList = [
         },
 ]
 
-const SkillShowCaseContents1 = [
+export const SkillShowCaseContents1 = [
     {
         name: "Python",
         logo: Python,
@@ -166,7 +166,7 @@ const SkillShowCaseContents1 = [
     },
 
 ]
-const SkillShowCaseContents2 = [
+export const SkillShowCaseContents2 = [
     {
         name: "Django",
         logo: Django,

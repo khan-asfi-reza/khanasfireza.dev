@@ -1,7 +1,7 @@
 import {FaArrowLeft, FaArrowRight} from "react-icons/fa";
 import {useEffect, useRef, useState} from "react";
 import classNames from "classnames";
-import {useWindowSize} from "../../hooks/useWindowSize";
+import {useWindowSize} from "../hooks/useWindowSize";
 
 export default function Carousel({
                                      children,

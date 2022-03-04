@@ -79,16 +79,14 @@ export const About = () => {
             <div className={"grid mt-10 grid md:grid-cols-5 grid-cols-1 md:gap-32 gap-y-10 xl:px-32 gap-y-10 z-10"}>
                 <div className={"md:order-1 order-2 md:transform col-span-2 md:rotate-12"}>
                     <div ref={ref}
-                        className={"grid md:grid-cols-2 sm:grid-cols-3 justify-content-center grid-cols-3 md:gap-10 sm:gap-12 gap-4"}>
+                        className={"grid md:grid-cols-2 sm:grid-cols-3 justify-content-center grid-cols-3 md:gap-8 sm:gap-12 gap-4"}>
                         {
                             SkillContentList.map((elem, key) => (
                                 <div key={key}
                                     className={"aspect-square md:p-0 sm:p-4 p-2 py-4 rounded-xl dark:bg-theme-dark-100 bg-theme-light-50 grid place-items-center"}>
                                     <div className={"text-center"}>
-                                        <div
-                                            className={"md:w-12 md:h-20 sm:w-10 sm:h-10 w-8 h-8 overflow-hidden mx-auto"}>
-                                            <img className={"w-full object-cover object-center"} alt={elem.name}
-                                                 src={elem.logo.src}/>
+                                        <div className={"2xl:w-16 2xl:h-16 lg:h-10 lg:w-10  md:w-12 md:h-12 sm:w-10 sm:h-10 w-8 h-8 overflow-hidden mx-auto"}>
+                                            <img className={"h-full object-cover object-center"} alt={elem.name} src={elem.logo.src}/>
                                         </div>
                                         <p className={"mt-2 md:text-lg dark:text-typo-dark-100 text-typo-light-400 text-sm"}>{elem.name}</p>
                                     </div>
@@ -100,7 +98,7 @@ export const About = () => {
 
 
                 <div className={"md:order-2 order-1 grid place-items-center col-span-3"}>
-                    <div className={"lg:px-32 md:px-26"}>
+                    <div className={"lg:px-16 md:px-14"}>
                         <hr id={"about_hr"} className={classnames("w-32 mt-3 text-primary bg-primary h-2 rounded-xl")}/>
                         <SectionHeader id={"about_heading"} header={"About Me"} headerClassName={"text-left mt-8 text-primary"}/>
                         <p id={"about_text"} className={"text-typo-light-300 text-lg dark:text-typo-dark-100 md:text-left  md:mt-32 mt-16"}>

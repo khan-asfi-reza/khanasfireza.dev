@@ -57,7 +57,7 @@ export const ContentParticle = ({id}) => {
                                    value: 80,
                                },
                                opacity: {
-                                   value: 0.7,
+                                   value: 0.1,
                                },
                                shape: {
                                    type: "circle",

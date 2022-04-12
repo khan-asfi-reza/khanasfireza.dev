@@ -65,7 +65,7 @@ const ProjectList = [
             connection,
             A user can subscribe to any content creator.<br/> This web app is built using HTML, CSS, Django, Python</>,
         "tags": [<Python/>, <HTML/>, <CSS/>, <JS/>],
-        "link": "https://khan-asfi-reza.github.io/Blog-Spot/"
+        "href": "https://khan-asfi-reza.github.io/Blog-Spot/"
     },
     {
         "title": "Funskul",
@@ -79,7 +79,7 @@ const ProjectList = [
             are welcome to our platform, we use social medias and content sites to publish our contents, for example,
             youtube or facebook, besides we have our website to showcase our activities and link our contents there.
         </>,
-        "link": "https://funskul.com/"
+        "href": "https://funskul.com/"
 
     },
     {
@@ -94,7 +94,7 @@ const ProjectList = [
             But this is only for referring other users to get loan for properties, if a user can invite other people to
             close a loan or deal, the user can earn good amount of profit.
         </>,
-        "link": "https://agent.shorecapital.net/referral/"
+        "href": "https://agent.shorecapital.net/referral/"
     },
 
 ]

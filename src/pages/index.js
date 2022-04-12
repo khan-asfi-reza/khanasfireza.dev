@@ -26,7 +26,7 @@ const Home = () => {
         <SeoHead/>
         <Header/>
         <BodyContent>
-            <ContentParticle id={"experience_particle"}/>
+
             <Hero/>
             <Experience/>
             <About/>

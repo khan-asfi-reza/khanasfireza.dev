@@ -1,5 +1,6 @@
 import {useEffect, useReducer, useRef} from "react";
 import {useWindowSize} from "../hooks/useWindowSize";
+import Link from "next/link";
 
 
 
@@ -74,7 +75,7 @@ const slidesReducer = (state, action) => {
             slideIndex: state.slideIndex === 0 ? action.slideLength - 1 : state.slideIndex - 1
         };
     }
-    return {}
+
 };
 
 function Slide({ slide, offset, parentRef }) {
@@ -83,13 +84,12 @@ function Slide({ slide, offset, parentRef }) {
 
 
     return (
-        <>
+        <Link href={slide.href ? slide.href : ""} passHref>
 
             <div
                 ref={ref}
                 className="slide"
                 data-active={active}
-
             >
                 <div
                     className="slide-content"
@@ -99,19 +99,20 @@ function Slide({ slide, offset, parentRef }) {
                         rotateY(calc(-45deg * ${offset === 0 ? 0 : offset > 0 ? 1 : -1}))`
                     }}
                 >
-
-                    <div className="slide-content-inner">
+                    <div className="slide-content-inner z-100">
                         <a href={slide.href} target={"_blank"} className={"slideTitle lg:text-5xl font-semibold " + slide.color}>{slide.title}</a>
                         <p className="slideDescription text-gray-300">{slide.description}</p>
                     </div>
                 </div>
+
             </div>
-        </>
+
+        </Link>
     );
 }
 
 export function GallerySlides({slides, parentRef}) {
-    const [state, dispatch] = useReducer(slidesReducer, initialState, );
+    const [state, dispatch] = useReducer(slidesReducer, initialState);
 
     const prevButtonOnClick = () => {
         dispatch({ type: "PREV", slideLength: slides.length })
@@ -134,13 +135,13 @@ export function GallerySlides({slides, parentRef}) {
         <>
 
             <div ref={slidesRef} className="slides">
-                <button onClick={prevButtonOnClick}>‹</button>
+                <button onClick={nextButtonOnClick}>‹</button>
 
                 {slides && [...slides, ...slides, ...slides].map((slide, i) => {
                     let offset = slides.length + (state.slideIndex - i);
                     return <Slide slide={slide} parentRef={slidesRef} offset={offset} key={i} />;
                 })}
-                <button onClick={nextButtonOnClick}>›</button>
+                <button onClick={prevButtonOnClick}>›</button>
             </div>
         </>
     );

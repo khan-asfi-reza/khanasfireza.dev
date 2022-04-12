@@ -1,11 +1,11 @@
 import {useCustomTheme} from "../hooks/useCustomTheme";
-import classnames from "classnames";
 import classNames from "classnames";
 import {FaBars, FaMoon, FaSun, FaTimes} from "react-icons/fa";
-import {useEffect, useRef, useState} from "react";
+import {useState} from "react";
 import {ABOUT_ID, CONTACT_ID, HOME_ID, SERVICES_ID, SKILLS_ID} from "../assets/data/ContentID";
-import {gsap} from "gsap";
 import {Disclosure, Switch} from "@headlessui/react";
+import {moveFromBottom, moveFromLeft} from "../const";
+import {motion} from "framer-motion";
 
 const navigation = [
     {name: 'Home', href: `#${HOME_ID}`, current: false},
@@ -18,17 +18,6 @@ const navigation = [
 export default function Header() {
     const [enabled, setEnabled] = useState(false)
     const {toggleTheme, getThemeIcon} = useCustomTheme();
-    const headerLinkRef = useRef(null);
-
-    useEffect(() => {
-        for (let i = 0; i < headerLinkRef.current.children.length; i++) {
-            gsap.from(headerLinkRef.current.children[i], {
-                opacity: 0, y: -100, delay: i * 0.2
-            })
-        }
-    }, [])
-
-
 
     return (<Disclosure as="nav" className="fixed z-100 w-full dark:bg-theme-dark-100 bg-theme-light-100">
             {({open}) => (
@@ -54,12 +43,12 @@ export default function Header() {
                                 </Disclosure.Button>
                             </div>
                             <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                                <div className="flex-shrink-0 flex items-center">
-                                    <h2 className={"dark:text-white text-typo-light-400 font-bold text-xl"}>Khan Asfi
-                                        Reza</h2>
-                                </div>
+                                <motion.div {...moveFromLeft()}  className="flex-shrink-0 flex items-center">
+                                    <motion.h2 className={"dark:text-white text-typo-light-400 font-bold text-xl"}>Khan Asfi
+                                        Reza</motion.h2>
+                                </motion.div>
                                 <div className="hidden sm:block sm:ml-6">
-                                    <div ref={headerLinkRef} className="flex space-x-4">
+                                    <motion.div {...moveFromLeft()} className="flex space-x-4">
                                         {navigation.map((item) => (
                                             <a
                                                 key={item.name}
@@ -73,7 +62,7 @@ export default function Header() {
                                                 {item.name}
                                             </a>
                                         ))}
-                                    </div>
+                                    </motion.div>
                                 </div>
                             </div>
                             <div

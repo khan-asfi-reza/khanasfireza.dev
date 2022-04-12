@@ -53,6 +53,7 @@
 
 .slide{
     transition: all 0.5s ease;
+    @apply relative;
 }
 
 .slide[data-active] {

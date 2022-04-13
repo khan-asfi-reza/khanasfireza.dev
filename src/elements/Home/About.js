@@ -44,7 +44,7 @@ export const About = () => {
                                 <motion.div {...moveFromLeft(0.3 * key)} key={key}
                                     className={"aspect-square md:p-0 sm:p-4 p-2 py-4 rounded-xl dark:bg-theme-dark-100 bg-theme-light-50 grid place-items-center"}>
                                     <div className={"text-center"}>
-                                        <div className={"2xl:w-16 2xl:h-16 lg:h-10 lg:w-10  md:w-12 md:h-12 sm:w-10 sm:h-10 w-8 h-8 overflow-hidden mx-auto"}>
+                                        <div className={"2xl:w-16 2xl:h-16 lg:h-16 lg:w-16 md:w-12 md:h-12 sm:w-16 sm:h-16 w-10 h-10 overflow-hidden mx-auto"}>
                                             <img className={"h-full object-cover object-center"} alt={elem.name} src={elem.logo.src}/>
                                         </div>
                                         <p className={"mt-2 md:text-lg dark:text-typo-dark-100 text-typo-light-400 text-sm"}>{elem.name}</p>

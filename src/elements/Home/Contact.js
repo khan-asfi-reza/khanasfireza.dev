@@ -105,15 +105,15 @@ const Contact = () => {
     return (
         <SectionContainer id={CONTACT_ID} className={""}>
             <SectionHeader header={"Contact Me"} headerClassName={"text-left text-primaryLight"}/>
-            <div className={"grid md:grid-cols-5 grid-cols-1 mt-20 z-20 dark:bg-theme-dark-100 bg-theme-light-50 rounded-2xl z-20"}>
+            <div className={"grid md:grid-cols-5 grid-cols-1 mt-20 z-20 bg-theme-dark-100 rounded-2xl z-20"}>
 
                 <div className={"col-span-2 z-20 md:px-4 md:py-20 px-2 py-8 lg:w-9/12 md:w-full w-11/12 mx-auto "}>
                     <motion.div {...moveFromLeft()}>
                         <h2 id={"contact_h"}
-                            className={"text-4xl font-semibold dark:text-indigo-100 text-indigo-900"}>Let's get connected</h2>
+                            className={"text-4xl font-semibold text-indigo-100 "}>Let's get connected</h2>
                         <hr id={"contact_hr"} className={"w-32 h-1 border-none bg-indigo-400 rounded-xl mt-3"}/>
                     </motion.div>
-                    <motion.p {...moveFromLeft(0.3)} id={"contact_text"} className={"mt-14 dark:text-typo-dark-200 text-typo-light-200 text-xl"}>
+                    <motion.p {...moveFromLeft(0.3)} id={"contact_text"} className={"mt-14 text-typo-dark-200  text-xl"}>
                         Send me a feedback about my website and projects, for any collaboration, feel free
                         to reach out to me, I would be happy to get connected.
                         <br/>
@@ -126,7 +126,7 @@ const Contact = () => {
 
                 </div>
                 <div
-                    className={"col-span-3 bg-white rounded-3xl border-[1rem] dark:border-theme-dark-100 border-theme-light-50"}>
+                    className={"col-span-3 bg-white rounded-3xl border-[1rem] border-theme-dark-100 "}>
                     <div
                         className={"rounded-2xl bg-opacity-70 lg:w-9/12 md:w-full w-11/12 m-auto h-full md:px-4 md:py-8 px-2 py-4"}>
                         <h2 id={"contact_h"}
@@ -160,6 +160,7 @@ const Contact = () => {
                                     Message</label>
                                 <textarea value={data.message} onChange={onChange} id="message" name={"message"}
                                           required={true}
+                                          placeholder={"My message"}
                                           className={classNames("border w-full active:outline-0 outline-0 text-gray-700 mt-4 autofill-transparent peer",
                                               "bg-gray-100 p-2 focus-within:border-emerald-500 transition-all", "resize-none h-28")}
                                 />

@@ -17,6 +17,10 @@ import FastAPI from "../images/fastapi.png";
 import Django from "../images/django.png";
 import Psql from "../images/psql.png";
 import Box from "../images/Box.png";
+import Code from "../images/code.png";
+import Agile from "../images/agile.png";
+import WWW from "../images/world-wide-web.png";
+import Gfx from "../images/graphic-design.png";
 import {FaCode, FaCogs, FaLaptopCode, FaMobileAlt} from "react-icons/fa";
 
 export const HomePageIntroName = "Khan Asfi Reza";
@@ -56,30 +60,35 @@ export const HomePageObjects = [{
 
 export const AboutPageText = "I am Khan Asfi Reza, an expert Full-Stack developer with 5+ Years of experience in full-stack software development along with DevOps. Started learning to code since the age 13, still learning and developing  web and desktop applications. I love to take challenges and focus on solving the problem with passion and efficiency."
 
-export const AboutPageData = [{
-    "number": 30, "suffix": "+", "text": "Projects",
-}, {
-    "number": 10, "suffix": "+", "text": "Clients",
-}, {
-    "number": 3, "suffix": "+", "text": "Companies",
-},]
+
 export const ExperienceContent = [{
-    "icon": <FaMobileAlt/>,
-    "name": "Frontend Development",
-    "color": "dark:text-green-400 text-green-700",
+    "icon": Gfx,
+    "name": "Frontend",
+    "color": "text-green-600",
+    "border": "bg-green-600",
     "text": "I develop front-end applications using various Javascript and CSS frameworks including, React, NextJS, Svelte, Angular, Vue, Tailwind Etc. "
 
 }, {
-    "icon": <FaCogs/>,
-    "name": "Backend Development",
-    "color": "dark:text-purple-400 text-purple-700",
-    "text": "I focus mainly on the backend and develop applications using, django, flask, fastapi, django-rest-framework, node-js, graphene, java etc with postgresql database and mongodb"
+    "icon": Code,
+    "name": "Backend",
+    "color": "text-purple-700",
+    "border": "bg-purple-700",
+    "text": "I love backend the most and develop applications using, django, flask, fastapi, node-js etc with postgresql database and mongodb"
 }, {
-    "icon": <FaLaptopCode/>,
-    "name": "Full-Stack and Dev-ops",
-    "color": "dark:text-red-400 text-red-700",
-    "text": "Most of the time, I develop full-stack solutions using django, react, flask, vue etc with postgresql or mysql database. I have expertise in basic security and deployment as well"
-},]
+    "icon": WWW,
+    "name": "Full-Stack",
+    "color": "text-red-700",
+    "border": "bg-red-700",
+    "text": "Most of the time, I develop full-stack solutions using django, react, flask, vue etc with postgresql or mysql database. "
+},
+{
+    "icon": Agile,
+    "name": "Dev-ops",
+    "color": "text-yellow-700",
+    "border": "bg-yellow-700",
+    "text": "After learning both stacks, I have engaged myself in devops work as well, which includes deployment, CI CD, testing and many more"
+},
+]
 
 
 export const SkillContentList = [{
@@ -129,42 +138,4 @@ export const SkillShowCaseContents2 = [{
 
 export const AllSkillContents = [SkillShowCaseContents1, SkillShowCaseContents2]
 
-export const FrontEndSkillContent = {
-    logo: <FaCode/>, name: "Front-end", text: "Frontend development experience", skill_set: [{
-        name: "CSS", logo: CSS, year: 2017
-    }, {
-        name: "TypeScript", logo: TypeScript, year: 2018
-    }, {
-        name: "React", logo: ReactLogo, year: 2019
-    }, {
-        name: "Redux", logo: ReduxLogo, year: 2019
-    }, {
-        name: "Vue", logo: Vue, year: 2019
-    },]
-}
-
-export const BackEndSkillContent = {
-    logo: <FaCogs/>, name: "Back-end", text: "Backend development experience", skill_set: [{
-        name: "Python", logo: Python, year: 2017
-    }, {
-        name: "Django", logo: Django, year: 2018
-    }, {
-        name: "PostGreSQL", logo: Psql, year: 2018
-    }, {
-        name: "FastAPI", logo: FastAPI, year: 2019
-    }, {
-        name: "Kotlin", logo: Kt, year: 2019
-    },]
-}
-
-export const SkillContent = [FrontEndSkillContent, BackEndSkillContent]
-
-export function getNumberOfYear(year) {
-    const currentYear = new Date().getFullYear();
-    return currentYear - year
-}
-
-export function getPercentage(number, n) {
-    return (number / n) * 100
-}
 

@@ -24,7 +24,7 @@ import Gfx from "../images/graphic-design.png";
 import {FaCode, FaCogs, FaLaptopCode, FaMobileAlt} from "react-icons/fa";
 
 export const HomePageIntroName = "Khan Asfi Reza";
-export const HomePageIntroTitle = "Full-Stack Developer";
+export const HomePageIntroTitle = "Back-End | Full-Stack Engineer ";
 
 export const HomePageIntroText = () => {
     const age = useAge();
@@ -58,7 +58,7 @@ export const HomePageObjects = [{
                                 className={HOME_PAGE_OBJECT_CLASSNAME + "lg:bottom-24 lg:right-1/4 bottom-7 right-0"}/>
 },]
 
-export const AboutPageText = "I am Khan Asfi Reza, an expert Full-Stack developer with 5+ Years of experience in full-stack software development along with DevOps. Started learning to code since the age 13, still learning and developing  web and desktop applications. I love to take challenges and focus on solving the problem with passion and efficiency."
+export const AboutPageText = "Hallo Freunde, I am Khan Asfi Reza, Back-end Engineer, a python enthusiasat. Currently working as a Lead Back-end engineer at Zelf Technologies."
 
 
 export const ExperienceContent = [{

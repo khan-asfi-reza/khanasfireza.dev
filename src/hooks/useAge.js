@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 
-export function useAge(from=2018){
+export function useAge(from=2019){
     const [state, setState] = useState(null);
 
     useEffect(()=>{

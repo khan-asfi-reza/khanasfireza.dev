@@ -10,9 +10,9 @@ import {moveFromLeft, moveFromTop} from "../../const";
 
 const WorkingExperience = [
     {
-        title: "Freelance Full-Stack Developer",
-        workplace: "Fiverr",
-        validity: "2018-"
+        title: "Lead Back-end Engineer",
+        workplace: "Zelf Technologies Inc",
+        validity: "2022-"
     },
     {
         title: "Jr Full-Stack Developer",

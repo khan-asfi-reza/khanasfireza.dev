@@ -31,7 +31,6 @@ const Home = () => {
             <Experience/>
             <About/>
             <Skills/>
-            <HireMe/>
             <Projects/>
             <Contact/>
         </BodyContent>

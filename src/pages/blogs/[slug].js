@@ -137,11 +137,17 @@ export async function getStaticProps({params}) {
     const {slug} = params;
     const api = await fetch(`https://raw.githubusercontent.com/khan-asfi-reza/blogs.khanasfireza.dev/master/${slug}.md`)
     const data = await api.text()
-    const title = slug.charAt(0).toUpperCase() + slug.slice(1)
+    const _title = slug.charAt(0).toUpperCase() + slug.slice(1)
+    let title = "Blog"
+    try{
+        title = _title.replaceAll("-", " ")
+    }catch{
+        title = "Blog"
+    }
     return {
       props: {
         data: data,
-        title: title.replaceAll("-", " ")
+        title: title
       }, // will be passed to the page component as props
     }
   }

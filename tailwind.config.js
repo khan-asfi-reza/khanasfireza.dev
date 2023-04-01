@@ -25,6 +25,7 @@ module.exports = {
         primary: "#0E8FC8",
         secondary: "#DCF6FF",
         primaryLight: "#1FAADB",
+        lightYellow: "#ffff71",
         chat:{
           light: {
             50: "#FFFFFF",
@@ -63,7 +64,6 @@ module.exports = {
           },
           dark:{
             100: "#18191E",
-
             200: "#121317",
           }
         }

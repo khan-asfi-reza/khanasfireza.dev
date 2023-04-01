@@ -5,7 +5,7 @@ import {motion} from "framer-motion";
 import {moveFromLeft, moveFromTop} from "../../const";
 import Image from "next/image";
 import {FaArrowRight} from "react-icons/fa";
-import {SKILLS_ID} from "../../assets/data/ContentID";
+import {CONTACT_ID} from "../../assets/data/ContentID";
 
 const headerClassNameFunc = () => classnames("font-semibold md:text-6xl xs:text-5xl text-4xl text-primary relative",);
 
@@ -14,7 +14,7 @@ export function Experience() {
 
 
     return (
-        <section id={"experience"} className={""}>
+        <section id={"experience"} className={"container mx-auto"}>
             <div className={"relative overflow-hidden "}>
                 <div className={"grid lg:grid-cols-2 gap-10"}>
                     <motion.div {...moveFromLeft()} className={"sm:px-20 sm:py-20 px-4 py-20"}>
@@ -23,18 +23,18 @@ export function Experience() {
                         </h2>
                         <hr className={classnames("w-20 mt-3 md:mx-0 mx-auto text-primary bg-primary w-25 h-1")}/>
                         <p className={"mt-20 dark:text-typo-dark-100 text-typo-light-200 max-w-xl"}>
-                            I have experience in web and
-                            software development for a long time, and I have been working for several clients and companies
-                            as a developer, besides that I have participated in various Programming and Web Dev contests and
-                            was able to achieve something good in those contests</p>
-                        <a href={"#"+SKILLS_ID} className={"w-48 text-emerald-500 border mt-20 py-4 px-4 border-emerald-500 flex items-center justify-between"}>
+                        As a versatile software engineer, I excel in crafting powerful backend services that drive the heart of applications. While I'm no stranger to frontend development, my true passion lies in architecting the intricate systems that operate behind the scenes. My experience extends across an array of languages and frameworks, allowing me to adapt and deliver exceptional results on a diverse range of projects.
+With a repertoire of over five programming languages under my belt, I've navigated the technological landscape, harnessing the power of various frameworks to build dynamic and impactful solutions. Embracing the DevOps philosophy, I seamlessly integrate development and operations to ensure a streamlined, efficient process from start to finish.
+Join me as I continue to explore the ever-evolving world of technology, pushing the boundaries of what's possible and creating the extraordinary.
+                        </p>
+                        <a href={"#"+CONTACT_ID} className={"w-48 text-emerald-500 border mt-20 py-4 px-4 border-emerald-500 flex items-center justify-between"}>
                             <span>
-                                Learn More
+                                Let's Connect
                             </span>
                             <FaArrowRight/>
                         </a>
                     </motion.div>
-                    <div className={"grid sm:grid-cols-2 sm:px-20 sm:py-20 px-4 py-20 lg:gap-12 gap-x-10 gap-y-14 bg-yellow-300"}>
+                    <div className={"grid sm:grid-cols-2 sm:px-20 sm:py-20 px-4 py-20 lg:gap-12 gap-x-10 gap-y-14 bg-lightYellow"}>
                         {
                             ExperienceContent.map((elem, key) => (
                                 <motion.div {...moveFromTop(key * 0.23)}

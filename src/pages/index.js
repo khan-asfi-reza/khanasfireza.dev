@@ -3,13 +3,10 @@ import BodyContent from "../container/Layout/BodyContent";
 import Hero from "../elements/Home/Hero";
 import {About} from "../elements/Home/About";
 import {Experience} from "../elements/Home/Experience";
-import {HireMe} from "../elements/Home/HireMe";
-import {Projects} from "../elements/Home/Projects";
 import Contact from "../elements/Home/Contact";
 import Footer from "../elements/Home/Footer";
 import {SeoHead} from "../components/Head";
 import ScrollToTop from "../components/ScrollToTop";
-import {ContentParticle} from "../components/Particles";
 import {Skills} from "../elements/Home/Skills";
 import {useEffect} from "react";
 import gsap from 'gsap';
@@ -28,10 +25,11 @@ const Home = () => {
         <BodyContent>
 
             <Hero/>
-            <Experience/>
             <About/>
+            <Experience/>
+  
             <Skills/>
-            <Projects/>
+            {/* <Projects/> */}
             <Contact/>
         </BodyContent>
         <Footer/>

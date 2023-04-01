@@ -1,0 +1,11 @@
+{
+    "files.autoSave": "afterDelay",
+    "window.zoomLevel": 0.5,
+    "editor.fontSize": 18,
+    "editor.fontFamily": "Consolas, 'Courier New', monospace",
+    "files.associations": {
+        "pages/*.js": "javascriptreact",
+        "elements/*.js": "javascriptreact",
+        "components/*.js": "javascriptreact"
+      }
+}

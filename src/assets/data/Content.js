@@ -58,7 +58,7 @@ export const HomePageObjects = [{
                                 className={HOME_PAGE_OBJECT_CLASSNAME + "lg:bottom-24 lg:right-1/4 bottom-7 right-0"}/>
 },]
 
-export const AboutPageText = "Hallo Freunde, I am Khan Asfi Reza, Back-end Engineer, a python enthusiasat. Currently working as a Lead Back-end engineer at Zelf Technologies."
+export const AboutPageText = "Hello there! I'm Khan Asfi Reza, a passionate Pythonista and lead backend engineer at Zelf Technologies. With a deep-rooted love for web technologies, I strive to deliver innovative, efficient, and robust solutions to complex problems. My curiosity for compilers and interpreters fuels my passion for software engineering, motivating me to explore new horizons and sharpen my skills each day."
 
 
 export const ExperienceContent = [{

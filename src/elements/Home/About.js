@@ -10,27 +10,6 @@ import {gsap} from "gsap";
 import {moveFromBottom, moveFromLeft} from "../../const";
 import {motion} from "framer-motion";
 
-const StatData = [
-    {
-        name: "Clients",
-        number: 10,
-        logo: <FaUserAlt/>,
-        color: "dark:text-green-400 text-green-500"
-    },
-    {
-        name: "Projects",
-        number: 20,
-        logo: <FaLaptopCode/>,
-        color: "dark:text-red-400 text-red-500"
-    },
-    {
-        name: "Companies",
-        number: 3,
-        logo: <FaBriefcase/>,
-        color: "dark:text-purple-400 text-purple-500"
-    }
-]
-
 
 export const About = () => {
 

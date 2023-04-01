@@ -9,6 +9,7 @@ import {motion} from "framer-motion";
 
 const navigation = [
     {name: 'Home', href: `/#${HOME_ID}`, current: false},
+    {name: 'Blogs', href: `/blogs`, current: false},
     {name: 'About', href: `/#${ABOUT_ID}`, current: false},
     {name: 'Skills', href: `/#${SKILLS_ID}`, current: false},
     {name: 'Services', href: `/#${SERVICES_ID}`, current: false},

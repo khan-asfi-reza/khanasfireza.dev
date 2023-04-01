@@ -55,9 +55,7 @@ export const Skills = () => {
                     <div id={"skill_text"}>
                         <SectionHeader header={"Skills and Experience"} headerClassName={"text-left text-primary"}/>
                         <motion.p {...moveFromLeft()} className={"mt-14 dark:text-typo-dark-100 text-typo-light-200"}>
-                            I have professional experience in more than 10+ Languages and Frameworks along with
-                            relational databases and many other
-                            technical tools. I have worked with 3 Companies and several clients to provide services.
+                        Throughout my career, I've had the privilege of working with an extensive array of programming languages and frameworks, enabling me to bring numerous projects to life with efficiency and flair.
                         </motion.p>
                     </div>
                     <div id={"SKILL_CAROUSEL"} className={"mt-12"}>

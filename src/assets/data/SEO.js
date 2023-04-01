@@ -4,6 +4,49 @@ const getContentUrl = (contentUrl) => BASE_URL + contentUrl
 
 const SEO_Image = getContentUrl("_next/image?url=%2F_next%2Fstatic%2Fmedia%2FKhanAsfiReza.ada32960.png&w=3840&q=75")
 
+export const KeyWords = [
+    "khan asfi reza",
+    "khan",
+    "asfi",
+    "reza",
+    "pranto",
+    "Khan Asfi Reza",
+    "khanasfireza",
+    "khan-asfi-reza",
+    "django",
+    "python",
+    "docker",
+    "django rest framework",
+    "djangorestframework",
+    "pythonbangladesh",
+    "djangobangladesh",
+    "bangladesh",
+    "dhaka",
+    "djangodhaka",
+    "djangopython",
+    "django dhaka",
+    "django bangladesh",
+    "api dhaka",
+    "api bangladesh",
+    "fullstack developer",
+    "full stack developer",
+    "web developer",
+    "fullstackdeveloper",
+    "backend developer",
+    "backend engineer",
+    "zelf",
+    "hellozelf",
+    "zelflive",
+    "zelf engineer",
+    "cv",
+    "resume",
+    "engineer",
+    "computer science",
+    "khan engineer",
+    "khan developer",
+    "khan asfi developer"
+]
+
 export  const SeoMetaTags = [
     {
         name: "title",
@@ -12,12 +55,12 @@ export  const SeoMetaTags = [
     },
     {
         name: "description",
-        content: "I am Khan Asfi Reza, a full stack developer, tech enthusiast with more than 5+ Years of experience. Currently working as a freelance developer at various marketplace.",
+        content: "Hello there! I'm Khan Asfi Reza, a passionate Pythonista and lead backend engineer at Zelf Technologies. With a deep-rooted love for web technologies, I strive to deliver innovative, efficient, and robust solutions to complex problems. My curiosity for compilers and interpreters fuels my passion for software engineering, motivating me to explore new horizons and sharpen my skills each day.",
         property: ""
     },
     {
         name: "keywords",
-        content: "khan asfi reza, full stack developer, web developer, python, django, javascript, full stack developer cv, full stack developer resume, full stack web developer, font-end developer, backend developer",
+        content: KeyWords.toString(),
         property: ""
     },
     {
@@ -48,7 +91,7 @@ export  const SeoMetaTags = [
     {
         name: "",
         property: "og:description",
-        content: "I am Khan Asfi Reza, a full stack developer, tech enthusiast with more than 5+ Years of experience."
+        content: "Hello there! I'm Khan Asfi Reza, a passionate Pythonista and lead backend engineer at Zelf Technologies. With a deep-rooted love for web technologies, I strive to deliver innovative, efficient, and robust solutions to complex problems. My curiosity for compilers and interpreters fuels my passion for software engineering, motivating me to explore new horizons and sharpen my skills each day."
     },
     {
         name: "",

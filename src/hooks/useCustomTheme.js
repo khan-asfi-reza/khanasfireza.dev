@@ -31,6 +31,7 @@ export function useCustomTheme(){
 
     return {
         toggleTheme: toggleTheme,
-        getThemeIcon: getThemeIcon
+        getThemeIcon: getThemeIcon,
+        theme: theme
     }
 }

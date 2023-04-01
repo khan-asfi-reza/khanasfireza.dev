@@ -1,9 +1,9 @@
 import {SeoMetaTags} from "../assets/data/SEO";
 import Head from "next/head";
 
-export const SeoHead = () => (
+export const SeoHead = ({title, config={}}) => (
     <Head >
-        <title>Khan Asfi Reza | Full Stack Developer</title>
+        <title>Khan Asfi Reza | {title}</title>
         <link rel="shortcut icon" href=""/>
 
         <meta charSet="UTF-8"/>
@@ -12,7 +12,19 @@ export const SeoHead = () => (
         {
             SeoMetaTags.map((each, i) =>
                 (
-                    <meta key={i} name={each.name} content={each.content} property={each.property}/>
+                    each.name in config ? 
+                    <meta key={i} name={each.name} content={
+                        config[each.name].contentToAdd ? each.content + " "+config[each.name].content
+                        :
+                        config[each.name].content
+                    } property={
+                        config[each.name].propertyToAdd ? each.property + " "+config[each.name].property
+                        :
+                        config[each.name].property
+                    }/> 
+                    : 
+                    <meta key={i} name={each.name} content={each.content} property={each.property}/> 
+
                 )
             )
         }

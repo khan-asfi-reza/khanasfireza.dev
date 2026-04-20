@@ -1,19 +1,15 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
-  mode: 'jit',
-  purge: ['./src/**/*.{js,ts,jsx,tsx}', './src/**/*.{js,ts,jsx,tsx}'],
-  darkMode: 'class', // or 'media' or 'class'
+  darkMode: 'class',
   theme: {
     screens: {
       'xs': '475px',
       ...defaultTheme.screens,
     },
     extend: {
-
-      zIndex:{
+      zIndex: {
         '60': '60',
-        '100': '100'
-
+        '100': '100',
       },
       spacing: {
         '97': '30rem',
@@ -21,12 +17,12 @@ module.exports = {
         '99': '34rem',
         '100': '42rem',
       },
-      colors:{
+      colors: {
         primary: "#0E8FC8",
         secondary: "#DCF6FF",
         primaryLight: "#1FAADB",
         lightYellow: "#ffff71",
-        chat:{
+        chat: {
           light: {
             50: "#FFFFFF",
             100: "#F5F7FA",
@@ -34,46 +30,40 @@ module.exports = {
             300: "#e9ebed",
           },
           dark: {
-            10:"#212226",
+            10: "#212226",
             50: "#141414",
             100: "#1c1e23",
             200: "#18191E",
             300: "#121216",
-
-          }
+          },
         },
-        typo:{
-          dark:{
+        typo: {
+          dark: {
             100: "#ABA7A7",
             200: "#DBDADA",
             300: "#E5E2E2",
-            400: "#F7F7F7"
+            400: "#F7F7F7",
           },
-          light:{
+          light: {
             100: "#8B8989",
             200: "#555252",
             300: "#413F3F",
-            400: "#0A0A0A"
-          }
+            400: "#0A0A0A",
+          },
         },
-        theme:{
-          light:{
+        theme: {
+          light: {
             50: "#edebeb",
             100: "#F9F6F6",
             200: "#FBFBFB",
           },
-          dark:{
+          dark: {
             100: "#18191E",
             200: "#121317",
-          }
-        }
-
-      }
+          },
+        },
+      },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 }
-

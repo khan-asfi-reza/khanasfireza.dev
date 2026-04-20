@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+@config "../../../tailwind.config.js";
 
 
 .carousel{
@@ -151,9 +153,6 @@
     transition: top, left, right, bottom, margin-top, margin-left, margin-bottom, margin-right 500ms;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 .flex-full{
     flex: 0 0 100%;
